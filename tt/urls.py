@@ -17,8 +17,10 @@ Including another URLconf
 from django import views
 from django.contrib import admin
 from django.urls import include, path
+from usuarios import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('csv/', include('proyecto_csv.urls')),
+    path('registro/', user_views.register, name="register"),
 ]
