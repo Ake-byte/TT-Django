@@ -1,6 +1,7 @@
 import imp
 from django.shortcuts import redirect, render
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
 # Create your views here.
 
@@ -12,8 +13,13 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(
-                request, f'Bienvenido {username}, tu cuenta ha sido creada.')
-            return redirect('csv:index')
+                request, f'Bienvenido {username}, has iniciado sesión exitosamente.')
+            return redirect('login')
     else:
         form = RegisterForm()
     return render(request, 'usuarios/Registro.html', {'form': form})
+
+
+@login_required
+def profilePage(request):
+    return render(request, 'usuarios/Perfil.html')
