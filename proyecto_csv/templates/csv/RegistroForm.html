@@ -1,8 +1,26 @@
 {% extends 'csv/layout.html' %}
 {% block body %}
-<form method="post">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit">Save</button>
-</form>
+<div class="container py-5">
+    <h1>Registro</h1>
+    <div class="card">
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nombre Registro</label>
+                    <div class="col-sm-6">
+                        {{ form.nombre_registro }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Descripción Registro</label>
+                    <div class="col-sm-6">
+                        {{ form.descripcion_registro }}
+                    </div>
+                </div>
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -22,28 +22,22 @@
 
                         </div>
                         <div class="form">
-                            <h2>Inicio de Sesión</h2>
-                            <br>
+                            <h2>Login Form</h2>
                             <form method="POST">
                                 {% csrf_token %}
                                 <div class="form-group">
                                     <h3>Nombre de Usuario</h3>
-                                    <br>
                                     {{ form.username }}
                                 </div>
-                                <br>
                                 <div class="form-group">
                                     <h3>Contraseña</h3>
-                                    <br>
                                     {{ form.password }}
                                 </div>
-                                <br>
                                 <div>
-                                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                                    <button type="button" class="btn btn-primary">Iniciar Sesión</button>
                                 </div>
                                 <div>
-                                    <button class="btn btn-primary"><a class="nav-link"
-                                            href="{% url 'register' %}">Registrarse</a></button>
+                                    <button type="button" class="btn btn-primary">Registrarse</button>
                                 </div>
                             </form>
                         </div>
