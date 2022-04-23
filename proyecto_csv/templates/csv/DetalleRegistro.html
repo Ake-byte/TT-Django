@@ -10,6 +10,11 @@
             <h1>{{ registro.archivo_registro }}</h1>
         </div>
     </div>
+    <div class="card" width='100%'>
+        {% for grafica in graficas %}
+            <img src=../../{{grafica}} />
+        {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

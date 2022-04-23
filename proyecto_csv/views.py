@@ -4,7 +4,7 @@ from django.core.files.base import ContentFile
 
 from .forms import RegistroForm
 from .models import Registro
-from .utils import preprocesar, graficar
+from .utils import preprocesar, graficar, get_graficas
 
 import pandas as pd
 # Create your views here.
@@ -20,8 +20,10 @@ def index(request):
 
 def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
+    graficas = get_graficas(id)
     context = {
         'registro': registro,
+        'graficas': graficas,
     }
     return render(request, 'csv/DetalleRegistro.html', context)
 
