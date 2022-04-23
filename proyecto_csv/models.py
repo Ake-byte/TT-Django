@@ -10,3 +10,4 @@ class Registro(models.Model):
 
     nombre_registro = models.CharField(max_length=200)
     descripcion_registro = models.CharField(max_length=200)
+    archivo_registro = models.FileField(blank=True, null=True)

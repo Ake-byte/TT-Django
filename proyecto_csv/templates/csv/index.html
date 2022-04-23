@@ -35,7 +35,7 @@
                             <td>{{ csv.id }}</td>
                             <td>{{ csv.nombre_registro }}</td>
                             <td></td>
-                            <td></td>
+                            <td>{{ csv.descripcion_registro }}</td>
                             <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">Ver</a></td>
                             <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning">Editar</a></td>
                             <td><a href="{% url 'csv:eliminarRegistro' csv.id %}" class="btn btn-danger">Eliminar</a>

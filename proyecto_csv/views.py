@@ -23,7 +23,7 @@ def detalleRegistro(request, id):
 
 
 def crearRegistro(request):
-    form = RegistroForm(request.POST or None)
+    form = RegistroForm(request.POST or request.FILES)
 
     if form.is_valid():
         form.save()
