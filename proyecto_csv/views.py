@@ -4,7 +4,7 @@ from django.core.files.base import ContentFile
 
 from .forms import RegistroForm
 from .models import Registro
-from .utils import preprocesar
+from .utils import preprocesar, graficar
 
 import pandas as pd
 # Create your views here.
@@ -35,6 +35,8 @@ def crearRegistro(request):
         content = preprocesar(archivo).to_csv()
         temp_file = ContentFile(content.encode('utf-8'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
+        archivo = pd.read_csv(instance.archivo_registro)
+        graficar(instance.id, archivo)
         instance.save()
         return redirect('csv:index')
 
