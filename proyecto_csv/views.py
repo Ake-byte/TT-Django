@@ -23,10 +23,11 @@ def detalleRegistro(request, id):
 
 
 def crearRegistro(request):
-    form = RegistroForm(request.POST or request.FILES)
+    form = RegistroForm(request.POST or None, request.FILES or None)
 
     if form.is_valid():
-        form.save()
+        instance = form.save(commit=False)
+        instance.save()
         return redirect('csv:index')
 
     return render(request, 'csv/RegistroForm.html', {'form': form})
