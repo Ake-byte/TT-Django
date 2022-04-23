@@ -1,8 +1,12 @@
 from multiprocessing import context
 from django.shortcuts import redirect, render
+from django.core.files.base import ContentFile
 
 from .forms import RegistroForm
 from .models import Registro
+from .utils import preprocesar
+
+import pandas as pd
 # Create your views here.
 
 
@@ -27,6 +31,10 @@ def crearRegistro(request):
 
     if form.is_valid():
         instance = form.save(commit=False)
+        archivo = pd.read_csv(instance.archivo_registro)
+        content = preprocesar(archivo).to_csv()
+        temp_file = ContentFile(content.encode('utf-8'))
+        instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
         instance.save()
         return redirect('csv:index')
 
