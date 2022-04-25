@@ -1,0 +1,62 @@
+{% extends 'csv/layout.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% block body %}
+    <div class="container py-4">
+        <a href="{% url 'csv:crearRegistro' %}" class="btn btn-success">Añadir Registro</a>
+    </div>
+    <div class="container py-2">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Usuario</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Fecha de Creación</th>
+                            <th>Ver Predicción</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for csv in lista_registro %}
+                        <tr>
+                            <td>{{ csv.id }}</td>
+                            <td>{{ csv.user }}</td>
+                            <td>{{ csv.nombre_registro }}</td>
+                            <td>{{ csv.descripcion_registro }}</td>
+                            <td>{{ csv.fechaCreacion }}</td>
+                            <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">Ver</a></td>
+                            <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning">Editar</a></td>
+                            <td>
+                                {% if request.user == csv.user %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger" name="csv-id"
+                                        value="{{csv.id}}">Eliminar</button>
+                                </form>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

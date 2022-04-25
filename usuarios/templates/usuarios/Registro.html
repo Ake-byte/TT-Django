@@ -1,4 +1,4 @@
-{% extends 'csv/layout.html' %}
+{% extends 'usuarios/layout.html' %}
 {% block body %}
 <div class="container py-5">
     <h1>Registro</h1>
@@ -42,7 +42,14 @@
                         {{ form.password2 }}
                     </div>
                 </div>
-                <button type="submit">Registrarse</button>
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-primary" type="submit">Registrarse</button>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-danger" href="{% url 'login' %}">Cancelar</a>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

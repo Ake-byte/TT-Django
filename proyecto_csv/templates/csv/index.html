@@ -11,42 +11,7 @@
 
 <body>
     {% block body %}
-    <div class="container py-4">
-        <a href="{% url 'csv:crearRegistro' %}" class="btn btn-success">Añadir Registro</a>
-    </div>
-    <div class="container py-2">
-        <div class="card">
-            <div class="card-body">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Periodo</th>
-                            <th>Descripción</th>
-                            <th>Ver Predicción</th>
-                            <th>Editar</th>
-                            <th>Eliminar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for csv in lista_registro %}
-                        <tr>
-                            <td>{{ csv.id }}</td>
-                            <td>{{ csv.nombre_registro }}</td>
-                            <td></td>
-                            <td>{{ csv.descripcion_registro }}</td>
-                            <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">Ver</a></td>
-                            <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning">Editar</a></td>
-                            <td><a href="{% url 'csv:eliminarRegistro' csv.id %}" class="btn btn-danger">Eliminar</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    <h1>Inicio</h1>
     {% endblock %}
 </body>
 

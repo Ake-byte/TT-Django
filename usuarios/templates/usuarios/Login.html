@@ -1,3 +1,4 @@
+{% extends 'usuarios/layout.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,47 +12,43 @@
 </head>
 
 <body>
-    <section class="myform-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="form-area login-form">
-                        <div class="form-content">
-                            <h2>Herramienta web de selección de productos en tiendas de conveniencia para su promoción
-                                utilizando analítica de datos.</h2>
-
-                        </div>
-                        <div class="form">
-                            <h2>Inicio de Sesión</h2>
+    {% block body %}
+    <div class="container text-center py-4" style="width: 28rem;">
+        <div class="card">
+            <div class="card-header">
+                <h2>Inicio de Sesión</h2>
+            </div>
+            <div class="card-body">
+                <div class="form">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <h4>Nombre de Usuario</h4>
                             <br>
-                            <form method="POST">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <h3>Nombre de Usuario</h3>
-                                    <br>
-                                    {{ form.username }}
-                                </div>
-                                <br>
-                                <div class="form-group">
-                                    <h3>Contraseña</h3>
-                                    <br>
-                                    {{ form.password }}
-                                </div>
-                                <br>
-                                <div>
-                                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary"><a class="nav-link"
-                                            href="{% url 'register' %}">Registrarse</a></button>
-                                </div>
-                            </form>
+                            {{ form.username }}
                         </div>
-                    </div>
+                        <br>
+                        <div class="form-group">
+                            <h4>Contraseña</h4>
+                            <br>
+                            {{ form.password }}
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-primary" href="{% url 'register' %}">Registrarse</a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
+
         </div>
-    </section>
+
+        {% endblock %}
 </body>
 
 </html>
