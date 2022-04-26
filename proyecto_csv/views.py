@@ -72,13 +72,3 @@ def editarRegistro(request, id):
 
     return render(request, 'csv/RegistroForm.html', {'form': form, 'registro': registro})
 
-#@login_required(login_url="/login")
-#def eliminarRegistro(request, id):
-
-#    registro = Registro.objects.get(id=id)
-
-#    if request.method == 'POST':
-#        registro.delete()
-#        return redirect('csv:index')
-
-#    return render(request, 'csv/RegistroDelete.html', {'registro': registro})
