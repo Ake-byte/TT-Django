@@ -1,3 +1,5 @@
+from sre_parse import CATEGORIES
+from unicodedata import category
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -61,6 +63,9 @@ def regresion(df):
     lr_multiple = linear_model.LinearRegression()
     lr_multiple.fit(X_train, y_train)
     Y_pred_multiple = lr_multiple.predict(X_test)
+
+    print('DATOS TEST: ')
+    print(X_test)
     print('DATOS DEL MODELO REGRESIÓN LINEAL MULTIPLE')
     print()
     print('Valor de las pendientes o coeficientes "a":')
@@ -69,6 +74,8 @@ def regresion(df):
     print(lr_multiple.intercept_)
     print('Precisión del modelo:')
     print(lr_multiple.score(X_train, y_train))
+    print('Prediccion: ')
+    print(Y_pred_multiple)
 
 
 def arbolDesicionRegresion(df):
