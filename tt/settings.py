@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)ivujsil!&8w=%$!85&3vn^cf_alhuzcq+z5!ai^eeq5y1+i2a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'tt-herramienta-mineria.herokuapp.com']
 

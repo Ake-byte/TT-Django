@@ -74,8 +74,6 @@ def regresion(df):
     print(lr_multiple.intercept_)
     print('Precisión del modelo:')
     print(lr_multiple.score(X_train, y_train))
-    print('Prediccion: ')
-    print(Y_pred_multiple)
 
 
 def arbolDesicionRegresion(df):
