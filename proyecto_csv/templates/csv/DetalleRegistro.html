@@ -10,10 +10,40 @@
             <h1>{{ registro.archivo_registro }}</h1>
         </div>
     </div>
+    <div class="card">
+        <h3>Precisión del modelo: </h3>
+        <p>{{precision}}</p>
+    </div>
     <div class="card" width='100%'>
         {% for grafica in graficas %}
             <img src=../../{{grafica}} />
         {% endfor %}
+    </div>
+    <div class="card" width='100%'>
+        <img src=../../{{arbol}} />
+    </div>
+    <div class="card" width='100%'>
+        <table>
+            <tr>
+              {% for col in asociacion.columns %}
+                <td>
+                  {{col}}
+                </td>
+              {% endfor %}
+            </tr>
+            {% for index, row in asociacion.iterrows %}
+            <tr>
+                {% for cell in row %}
+                <td>
+                    {{cell}}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="card" width='100%'>
+        <img src=../../{{grafo}} />
     </div>
 </div>
 

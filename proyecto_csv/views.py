@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 
 from .forms import RegistroForm
 from .models import Registro
-from .utils import preprocesar, graficar, get_graficas, regresion, arbolDesicionRegresion
+from .utils import *
 
 import pandas as pd
 # Create your views here.
@@ -35,11 +35,21 @@ def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
     graficas = get_graficas(id)
     df = pd.read_csv(registro.archivo_registro)
-    regresion(df)
-    arbolDesicionRegresion(df)
+    copia = df.copy(deep=True)
+    precision = regresion(copia)
+    copia = df.copy(deep=True)
+    arbolDesicionRegresion(id, copia)
+    arbol = get_arbol(id)
+    copia = df.copy(deep=True)
+    asociacion = reglasAsociacion(id, copia)
+    grafo = get_reglas(id)
     context = {
         'registro': registro,
         'graficas': graficas,
+        'precision': precision,
+        'arbol': arbol,
+        'asociacion': asociacion,
+        'grafo': grafo,
     }
     return render(request, 'csv/DetalleRegistro.html', context)
 
