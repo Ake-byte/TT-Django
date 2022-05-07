@@ -17,7 +17,10 @@ def index(request):
 
 @login_required(login_url="/login")
 def listadoRegistros(request):
-    lista_registro = Registro.objects.all()
+    if request.user.is_superuser:
+        lista_registro = Registro.objects.all
+    else :    
+        lista_registro = Registro.objects.filter(user=request.user)
     context = {
         'lista_registro': lista_registro,
     }
