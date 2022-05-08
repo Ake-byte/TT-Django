@@ -10,6 +10,8 @@ urlpatterns = [
     # Listado Registros - /csv/Registros
     path('ListadoRegistros', views.listadoRegistros, name='listadoRegistros'),
     # Ver registro - /csv/id
+    #path('<int:id>/', views.detalleRegistro, name='detalleRegistro'),
+    # Ver registro High - /csv/id
     path('<int:id>/', views.detalleRegistro, name='detalleRegistro'),
     # Crear registro - /csv/form
     path('CrearRegistro', views.crearRegistro, name='crearRegistro'),

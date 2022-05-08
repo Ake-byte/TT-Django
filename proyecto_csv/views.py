@@ -34,7 +34,7 @@ def listadoRegistros(request):
     return render(request, 'csv/ListadoRegistros.html', context)
 
 @login_required(login_url="/login")
-def detalleRegistro(request, id):
+def detalleRegistroAlex(request, id):
     registro = Registro.objects.get(pk=id)
     graficas = get_graficas(id)
     df = pd.read_csv(registro.archivo_registro)
@@ -55,6 +55,54 @@ def detalleRegistro(request, id):
         'grafo': grafo,
     }
     return render(request, 'csv/DetalleRegistro.html', context)
+
+def detalleRegistro(request, id):
+    registro = Registro.objects.get(pk=id)
+    df = pd.read_csv(registro.archivo_registro)
+    rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(10)
+    rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(10)
+    rs3 = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(10)
+    rs4 = df.groupby('Order Date')['Sales'].sum().sort_values(ascending=False).head(10)
+    rs_pie = df.groupby("Category")["Quantity"].agg("sum")
+    categories1 = list(rs1.index)
+    values1 = list(rs1.values)
+    categories2 = list(rs2.index)
+    values2 = list(rs2.values)
+    categories3 = list(rs3.index)
+    values3 = list(rs3.values)
+    categories4 = list(rs4.index)
+    values4 = list(rs4.values)
+
+    categoriespie = list(rs_pie.index)
+    valuespie = list(rs_pie.values)
+
+    copia = df.copy(deep=True)
+    precision = regresion(copia)
+    copia = df.copy(deep=True)
+    arbolDesicionRegresion(id, copia)
+    arbol = get_arbol(id)
+    copia = df.copy(deep=True)
+    asociacion = reglasAsociacion(id, copia)
+    grafo = get_reglas(id)
+
+    data = []
+    for index in range(0, len(rs_pie.index)):
+        # print(rs_pie.index[index])
+        value = {'name': rs_pie.index[index], 'y': rs_pie.values[index]  }
+        data.append(value)
+	
+    context = {"categories1": categories1, 'values1': values1, 
+    "categories2": categories2, 'values2': values2, 
+    "categories3": categories3, 'values3': values3, 
+    "categories4": categories4, 'values4': values4, 
+    'data': data,
+    'registro': registro,
+    'precision': precision,
+    'arbol': arbol,
+    'asociacion': asociacion,
+    'grafo': grafo
+    }
+    return render(request, 'csv/DetalleRegistro2.html', context=context)
 
 @login_required(login_url="/login")
 def crearRegistro(request):
@@ -84,4 +132,3 @@ def editarRegistro(request, id):
         return redirect('csv:index')
 
     return render(request, 'csv/RegistroForm.html', {'form': form, 'registro': registro})
-

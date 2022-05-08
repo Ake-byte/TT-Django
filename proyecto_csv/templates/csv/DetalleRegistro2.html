@@ -1,0 +1,338 @@
+{% extends 'csv/layout.html' %}
+{% block body %}
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+</head>
+
+<body>
+
+    <div class="container-fluid text-center py-2">
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Datos Generales</a>
+                <a class="nav-item nav-link" id="nav-graficas-tab" data-toggle="tab" href="#nav-graficas" role="tab"
+                    aria-controls="nav-graficas" aria-selected="false">Resumen de Ventas</a>
+                <a class="nav-item nav-link" id="nav-arbol-tab" data-toggle="tab" href="#nav-arbol" role="tab"
+                    aria-controls="nav-arbol" aria-selected="false">Predicción (árbol de decisión)</a>
+                <a class="nav-item nav-link" id="nav-reglas-tab" data-toggle="tab" href="#nav-reglas" role="tab"
+                    aria-controls="nav-reglas" aria-selected="false">Sugerencias de Promoción (reglas de asociación)</a>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="card">
+                    <div class="card-body">
+                        <h1>{{ registro.id }}</h1>
+                        <h1>{{ registro.nombre_registro }}</h1>
+                        <h1>{{ registro.descripcion_registro }}</h1>
+                        <h1>{{ registro.archivo_registro }}</h1>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Precisión del modelo: </h3>
+                    <p>{{precision}}</p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-graficas" role="tabpanel" aria-labelledby="nav-graficas-tab">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">Cantidad de Productos vendidos
+                                <div class="card-body">
+                                    <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">Cantidad de Productos vendidos por Fecha
+                                <div class="card-body">
+                                    <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">Productos con mayores ingresos
+                                <div class="card-body">
+                                    <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-header">Productos con mayores ingresos por fecha
+                                <div class="card-body">
+                                    <div id="container4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="piechart" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+            </div>
+            <div class="tab-pane fade" id="nav-arbol" role="tabpanel" aria-labelledby="nav-arbol-tab">
+                <img src=../../{{arbol}} />
+            </div>
+            <div class="tab-pane fade" id="nav-reglas" role="tabpanel" aria-labelledby="nav-reglas-tab">
+                <div class="card" width='100%'>
+                    <table>
+                        <tr>
+                            {% for col in asociacion.columns %}
+                            <td>
+                                {{col}}
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% for index, row in asociacion.iterrows %}
+                        <tr>
+                            {% for cell in row %}
+                            <td>
+                                {{cell}}
+                            </td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                <div class="card" width='100%'>
+                    <img src=../../{{grafo}} />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chartjs libraries -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script>
+        _categories = {{ categories1 | safe }};
+        _values = {{ values1 | safe }};
+
+        Highcharts.chart('container1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Sales in Thousand'
+            },
+            xAxis: {
+                categories: _categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Sales in thousands'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} Units</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Total Sold Units',
+                data: _values
+
+            }]
+        });
+    </script>
+    <script>
+        _categories = {{ categories2 | safe }};
+        _values = {{ values2 | safe }};
+
+        Highcharts.chart('container2', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Sales in Thousand'
+            },
+            xAxis: {
+                categories: _categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Sales in thousands'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} Units</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Total Sold Units',
+                data: _values
+
+            }]
+        });
+    </script>
+    <script>
+        _categories = {{ categories3 | safe }};
+        _values = {{ values3 | safe }};
+
+        Highcharts.chart('container3', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Sales in Thousand'
+            },
+            xAxis: {
+                categories: _categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Sales in thousands'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} Units</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Total Sold Units',
+                data: _values
+
+            }]
+        });
+    </script>
+    <script>
+        _categories = {{ categories4 | safe }};
+        _values = {{ values4 | safe }};
+
+        Highcharts.chart('container4', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Sales in Thousand'
+            },
+            xAxis: {
+                categories: _categories,
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Sales in thousands'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y} Units</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Total Sold Units',
+                data: _values
+
+            }]
+        });
+    </script>
+    <script>
+        _values = {{ data | safe }}
+        // Build the chart
+        // Build the chart
+        Highcharts.chart('piechart', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Sales by Region'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Sales',
+                colorByPoint: true,
+                data: _values
+            }]
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#big_tables').DataTable();
+        });
+    </script>
+    {% endblock %}
