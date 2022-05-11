@@ -258,6 +258,16 @@ def reglasAsociacion(id, df):
     association = association_rules(frequent_itemsets_plus, metric='lift',
                     min_threshold=0.8).sort_values('lift', ascending=False).reset_index(drop=True)
 
+    association["antecedents"] = association["antecedents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
+    association["consequents"] = association["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
+    association["antecedent support"] = np.round(association["antecedent support"], decimals = 8)  
+    association["consequent support"] = np.round(association["consequent support"], decimals = 8)  
+    association["support"] = np.round(association["support"], decimals = 8) 
+    association["confidence"] = np.round(association["confidence"], decimals = 8)  
+    association["lift"] = np.round(association["lift"], decimals = 8)  
+    association["leverage"] = np.round(association["leverage"], decimals = 8)  
+    association["conviction"] = np.round(association["conviction"], decimals = 8)
+
     fig, ax=plt.subplots(figsize=(10,4))
     GA=nx.from_pandas_edgelist(association.head(10),source='antecedents',target='consequents')
     nx.draw(GA,with_labels=True,  node_size=100, arrows=True, pos=nx.circular_layout(GA))
