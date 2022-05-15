@@ -3,6 +3,8 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
+#from django.contrib.auth.models import User
+from .models import User
 from django.contrib.auth import get_user_model
 # Create your views here.
 
@@ -35,6 +37,22 @@ def listadoUsuarios(request):
         }
 
         return render(request, 'usuarios/ListadoUsuarios.html', context)
+    
+    messages.error(
+    request, f'Lo sentimos {request.user.username}, no tienes permisos para acceder a este recurso.')
+    return redirect('csv:index')
+
+@login_required(login_url="/login")
+def verUsuario(request, id):
+    if request.user.is_superuser:
+        #User = get_user_model()
+        usuario = User.objects.get(pk=id)
+        context = {
+            'usuario': usuario,
+        }
+        print(usuario.username)
+        print(usuario.id)
+        return render(request, 'usuarios/VerUsuario.html', context)
     
     messages.error(
     request, f'Lo sentimos {request.user.username}, no tienes permisos para acceder a este recurso.')

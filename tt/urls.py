@@ -32,6 +32,7 @@ urlpatterns = [
     path('logout/', authentication_views.LogoutView.as_view(
         template_name='usuarios/Login.html'), name='logout'),
     path('PerfilUsuario/', user_views.profilePage, name='profile'),
+    path('usuarios/', include('usuarios.urls')),
     path('ListadoUsuarios/', user_views.listadoUsuarios, name='listadoUsuarios'),
 ]
 

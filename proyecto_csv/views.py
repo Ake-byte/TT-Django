@@ -59,11 +59,12 @@ def detalleRegistroAlex(request, id):
 def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
     df = pd.read_csv(registro.archivo_registro)
-    rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(10)
-    rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(10)
-    rs3 = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(10)
-    rs4 = df.groupby('Order Date')['Sales'].sum().sort_values(ascending=False).head(10)
+    rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(5)
+    rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(5)
+    rs3 = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(5)
+    rs4 = df.groupby('Order Date')['Sales'].sum().sort_values(ascending=False).head(5)
     rs_pie = df.groupby("Category")["Quantity"].agg("sum")
+    rs_pie2 = df.groupby("Sub-Category")["Quantity"].agg("sum")
     categories1 = list(rs1.index)
     values1 = list(rs1.values)
     categories2 = list(rs2.index)
@@ -72,9 +73,6 @@ def detalleRegistro(request, id):
     values3 = list(rs3.values)
     categories4 = list(rs4.index)
     values4 = list(rs4.values)
-
-    categoriespie = list(rs_pie.index)
-    valuespie = list(rs_pie.values)
 
     copia = df.copy(deep=True)
     precision = regresion(copia)
@@ -91,11 +89,18 @@ def detalleRegistro(request, id):
         value = {'name': rs_pie.index[index], 'y': rs_pie.values[index]  }
         data.append(value)
 	
+    data2 = []
+    for index in range(0, len(rs_pie2.index)):
+        # print(rs_pie.index[index])
+        value = {'name': rs_pie2.index[index], 'y': rs_pie2.values[index]  }
+        data2.append(value)
+
     context = {"categories1": categories1, 'values1': values1, 
     "categories2": categories2, 'values2': values2, 
     "categories3": categories3, 'values3': values3, 
     "categories4": categories4, 'values4': values4, 
     'data': data,
+    'data2': data2,
     'registro': registro,
     'precision': precision,
     'arbol': arbol,
