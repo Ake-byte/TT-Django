@@ -45,7 +45,15 @@
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label">Permiso</label>
                     <div class="col-sm-4">
-                        {{ usuario.permisoUsuario.tipoPermiso }}
+                        {% if permisoUsuario.tipoPermiso == 1 %}
+                        Prueba gratuita
+                        {% endif %}
+                        {% if permisoUsuario.tipoPermiso == 2 %}
+                        Prueba Standar
+                        {% endif %}
+                        {% if permisoUsuario.tipoPermiso == 3 %}
+                        Prueba Premium
+                        {% endif %}
                     </div>
                 </div>
                 <br>

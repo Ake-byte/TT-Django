@@ -31,7 +31,8 @@
                             <td>{{ usuario.username }}</td>
                             <td><a href="{% url 'usuarios:verUsuario' usuario.id %}" class="btn btn-success">Ver</a>
                             </td>
-                            <td><a href="#" class="btn btn-warning">Editar</a></td>
+                            <td><a href="{% url 'usuarios:editarUsuario' usuario.id %}"
+                                    class="btn btn-warning">Editar</a></td>
                             <td><a href="#" class="btn btn-warning">Eliminar</a></td>
                             <td>
                             </td>
