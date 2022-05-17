@@ -3,7 +3,7 @@ from django.shortcuts import redirect, render
 from django.core.files.base import ContentFile
 from django.contrib.auth.decorators import login_required
 
-from .forms import RegistroForm
+from .forms import RegistroForm, PrediccionArbolForm
 from .models import Registro
 from .utils import *
 
@@ -77,8 +77,20 @@ def detalleRegistro(request, id):
     copia = df.copy(deep=True)
     precision = regresion(copia)
     copia = df.copy(deep=True)
-    arbolDesicionRegresion(id, copia)
-    arbol = get_arbol(id)
+    precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(copia)
+    day = 0
+    month = 0
+    sales = 0
+    prediccionArbol = ''
+    if request.method == "POST":
+        form = PrediccionArbolForm(request.POST)
+        if form.is_valid():
+            day = form.cleaned_data["day"]
+            month = form.cleaned_data["month"]
+            sales = form.cleaned_data["sales"]
+            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales)
+    else:
+        form = PrediccionArbolForm()
     copia = df.copy(deep=True)
     asociacion = reglasAsociacion(id, copia)
     grafo = get_reglas(id)
@@ -103,9 +115,10 @@ def detalleRegistro(request, id):
     'data2': data2,
     'registro': registro,
     'precision': precision,
-    'arbol': arbol,
     'asociacion': asociacion,
-    'grafo': grafo
+    'grafo': grafo,
+    'form': form,
+    'prediccionArbol': prediccionArbol
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 

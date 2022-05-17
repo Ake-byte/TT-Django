@@ -101,7 +101,12 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-arbol" role="tabpanel" aria-labelledby="nav-arbol-tab">
-                <img src=../../{{arbol}} />
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit", name="prediccionArbolDesicionClasificacion">Hacer predicción</button>
+                </form>
+                {{prediccionArbol}}
             </div>
             <div class="tab-pane fade" id="nav-reglas" role="tabpanel" aria-labelledby="nav-reglas-tab">
                 <div class="table-responsive">

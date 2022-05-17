@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn import preprocessing, linear_model
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.metrics import mean_squared_error
-from sklearn.tree import DecisionTreeRegressor, plot_tree, export_text
+from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier, plot_tree, export_text
 from mlxtend.frequent_patterns import apriori
 from mlxtend.frequent_patterns import association_rules
 import networkx as nx
@@ -18,6 +18,9 @@ def preprocesar(df):
     df = df.drop(columns=["Row ID","Order ID","Ship Date","Ship Mode","Customer ID","Customer Name","Segment","City","State","Country","Postal Code","Market","Region","Product ID","Discount","Profit","Order Priority","Shipping Cost"])
     df.dropna(inplace=True, how="any")
     df["Order Date"] = pd.to_datetime(df["Order Date"])
+    df["Day"] = df["Order Date"].dt.day
+    df["Month"] = df["Order Date"].dt.month
+    df["Year"] = df["Order Date"].dt.year
 
     return df
 
@@ -227,6 +230,25 @@ def arbolDesicionRegresion(id, df):
 
 def get_arbol(id):
     return f'static/images/tree{id}.jpg'
+
+def modeloArbolDesicionClasificacion(df):
+    X = df[["Day", "Month", "Sales"]]
+    Y = df[["Product Name"]]
+
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, train_size=0.80 ,random_state = 123)
+
+    arbol = DecisionTreeClassifier()
+    arbol_entrenado = arbol.fit(X_train, y_train)
+
+    precision_arbol = arbol_entrenado.score(X_test, y_test)
+
+    return precision_arbol, arbol_entrenado
+
+
+def arbolDesicionClasificacion(arbol_entrenado, day, month, sales):
+    prediccion = arbol_entrenado.predict([[day, month, sales]])
+
+    return prediccion
 
 
 def reglasAsociacion(id, df):
