@@ -11,3 +11,4 @@ class PrediccionArbolForm(forms.Form):
     day = forms.IntegerField()
     month = forms.IntegerField()
     sales = forms.FloatField()
+    quantity = forms.IntegerField()

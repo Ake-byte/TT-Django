@@ -41,7 +41,7 @@ def detalleRegistroAlex(request, id):
     copia = df.copy(deep=True)
     precision = regresion(copia)
     copia = df.copy(deep=True)
-    arbolDesicionRegresion(id, copia)
+    precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(id, copia)
     arbol = get_arbol(id)
     copia = df.copy(deep=True)
     asociacion = reglasAsociacion(id, copia)
@@ -88,7 +88,8 @@ def detalleRegistro(request, id):
             day = form.cleaned_data["day"]
             month = form.cleaned_data["month"]
             sales = form.cleaned_data["sales"]
-            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales)
+            quantity = form.cleaned_data["quantity"]
+            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity)
     else:
         form = PrediccionArbolForm()
     copia = df.copy(deep=True)
