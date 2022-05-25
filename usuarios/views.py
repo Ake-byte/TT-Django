@@ -17,6 +17,7 @@ def register(request):
             usuario = form.save()
 
             permiso = formPermiso.save(commit=False)
+            #permiso.tipoPermiso = 1
             permiso.user = usuario
             permiso.save()
 
@@ -26,7 +27,8 @@ def register(request):
             return redirect('login')
     else:
         form = RegisterForm()
-        formPermiso = PermisoUsuarioForm()
+        tipoPermiso = {'tipoPermiso':1}
+        formPermiso = PermisoUsuarioForm(data=tipoPermiso)
 
     context = {'form': form,
     'formPermiso': formPermiso,}

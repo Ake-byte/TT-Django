@@ -13,5 +13,5 @@ class Registro(models.Model):
     nombre_registro = models.CharField(max_length=200)
     descripcion_registro = models.CharField(max_length=200)
     fechaCreacion = models.DateTimeField(auto_now_add=True)
-    archivo_registro = models.FileField(blank=True, null=True)
+    archivo_registro = models.FileField()
     
