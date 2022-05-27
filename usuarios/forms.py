@@ -16,4 +16,5 @@ class PermisoUsuarioForm(forms.ModelForm):
     class Meta:
         model = PermisoUsuario
         fields = ('tipoPermiso',)
-        widgets = {'tipoPermiso': forms.HiddenInput()}
+        
+        #widgets = {'tipoPermiso': forms.HiddenInput()}

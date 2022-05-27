@@ -41,13 +41,14 @@
                             <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">Ver</a></td>
                             <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning">Editar</a></td>
                             <td>
-                                {% if request.user == csv.user or request.user.is_superuser %}
+
                                 <form method="post">
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-danger" name="csv-id"
                                         value="{{csv.id}}">Eliminar</button>
                                 </form>
-                                {% endif %}
+                                <!--{% if request.user == csv.user or request.user.is_superuser %}
+                                {% endif %}-->
                             </td>
                         </tr>
                         {% endfor %}

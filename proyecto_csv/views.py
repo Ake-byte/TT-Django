@@ -2,6 +2,7 @@ from multiprocessing import context
 from django.shortcuts import redirect, render
 from django.core.files.base import ContentFile
 from django.contrib.auth.decorators import login_required
+from usuarios.models import User, PermisoUsuario
 
 from .forms import RegistroForm
 from .models import Registro
@@ -28,7 +29,7 @@ def listadoRegistros(request):
     if request.method == "POST":
         registro_id = request.POST.get("csv-id")
         registro = Registro.objects.filter(id=registro_id).first()
-        if registro and registro.user == request.user:
+        if registro and registro.user == request.user or request.user.is_superuser:
             registro.delete()
 
     return render(request, 'csv/ListadoRegistros.html', context)
@@ -58,6 +59,8 @@ def detalleRegistroAlex(request, id):
 
 def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
+    usuario = request.user
+    permisoUsuario = PermisoUsuario.objects.get(user=usuario)
     df = pd.read_csv(registro.archivo_registro)
     rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(5)
     rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(5)
@@ -105,7 +108,8 @@ def detalleRegistro(request, id):
     'precision': precision,
     'arbol': arbol,
     'asociacion': asociacion,
-    'grafo': grafo
+    'grafo': grafo,
+    'permisoUsuario': permisoUsuario
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 

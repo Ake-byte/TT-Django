@@ -12,32 +12,36 @@ from django.contrib.auth import get_user_model
 def register(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
-        formPermiso = PermisoUsuarioForm(request.POST)
-        if form.is_valid() and formPermiso.is_valid():
+        if form.is_valid():
             usuario = form.save()
-
+            tipoPermiso = {'tipoPermiso':1}
+            formPermiso = PermisoUsuarioForm(data=tipoPermiso)
             permiso = formPermiso.save(commit=False)
-            #permiso.tipoPermiso = 1
             permiso.user = usuario
             permiso.save()
 
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Bienvenido {username}, has iniciado sesión exitosamente.')
-            return redirect('login')
+            return redirect('csv:index')
     else:
         form = RegisterForm()
-        tipoPermiso = {'tipoPermiso':1}
-        formPermiso = PermisoUsuarioForm(data=tipoPermiso)
+        
+        
 
     context = {'form': form,
-    'formPermiso': formPermiso,}
+    }
     return render(request, 'usuarios/Registro.html', context)
 
 
 @login_required
 def profilePage(request):
-    return render(request, 'usuarios/Perfil.html')
+    permisoUsuario = PermisoUsuario.objects.get(user=request.user)
+    context = {
+            'permisoUsuario': permisoUsuario,
+        }
+
+    return render(request, 'usuarios/Perfil.html', context)
 
 @login_required(login_url="/login")
 def listadoUsuarios(request):
@@ -74,6 +78,7 @@ def verUsuario(request, id):
 
 @login_required(login_url="/login")
 def editarUsuario(request, id):
+    
     usuario = User.objects.get(pk=id)
     permisoUsuario = PermisoUsuario.objects.get(user=usuario)
     form = PermisoUsuarioForm(request.POST or None, instance=permisoUsuario)
