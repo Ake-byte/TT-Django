@@ -60,10 +60,9 @@ def detalleRegistro(request, id):
     precision, regresion_entrenado = ModeloRegresion(copia)
     copia = df.copy(deep=True)
     precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(copia)
-    day = 0
-    month = 0
-    sales = 0
-    prediccionArbol = ''
+    day = month = sales = 0
+    prediccionArbol = prediccionRegresion = ''
+    product_name = quantityR = dayR = monthR = 0
     if request.method == "POST":
         form = PrediccionArbolForm(request.POST)
         formR = PrediccionRegresionForm(request.POST)
@@ -125,7 +124,6 @@ def crearRegistro(request):
         #print(enc)
         archivo = instance.archivo_registro.read().decode('ISO-8859-1')
         archivo = pd.read_csv(io.StringIO(archivo))
-        print(archivo)
         content = preprocesar(archivo).to_csv()
         temp_file = ContentFile(content.encode('ISO-8859-1'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
@@ -148,7 +146,6 @@ def editarRegistro(request, id):
         #print(enc)
         archivo = instance.archivo_registro.read().decode('ISO-8859-1')
         archivo = pd.read_csv(io.StringIO(archivo))
-        print(archivo)
         content = preprocesar(archivo).to_csv()
         temp_file = ContentFile(content.encode('ISO-8859-1'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
