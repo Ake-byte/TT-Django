@@ -2,8 +2,11 @@ from multiprocessing import context
 from django.shortcuts import redirect, render
 from django.core.files.base import ContentFile
 from django.contrib.auth.decorators import login_required
+import chardet
+import io
+import csv
 
-from .forms import RegistroForm, PrediccionArbolForm
+from .forms import PrediccionRegresionForm, RegistroForm, PrediccionArbolForm
 from .models import Registro
 from .utils import *
 
@@ -34,31 +37,10 @@ def listadoRegistros(request):
     return render(request, 'csv/ListadoRegistros.html', context)
 
 @login_required(login_url="/login")
-def detalleRegistroAlex(request, id):
-    registro = Registro.objects.get(pk=id)
-    graficas = get_graficas(id)
-    df = pd.read_csv(registro.archivo_registro)
-    copia = df.copy(deep=True)
-    precision = regresion(copia)
-    copia = df.copy(deep=True)
-    precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(id, copia)
-    arbol = get_arbol(id)
-    copia = df.copy(deep=True)
-    asociacion = reglasAsociacion(id, copia)
-    grafo = get_reglas(id)
-    context = {
-        'registro': registro,
-        'graficas': graficas,
-        'precision': precision,
-        'arbol': arbol,
-        'asociacion': asociacion,
-        'grafo': grafo,
-    }
-    return render(request, 'csv/DetalleRegistro.html', context)
-
 def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
-    df = pd.read_csv(registro.archivo_registro)
+    df = registro.archivo_registro.read().decode('ISO-8859-1')
+    df = pd.read_csv(io.StringIO(df))
     rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(5)
     rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(5)
     rs3 = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(5)
@@ -75,7 +57,7 @@ def detalleRegistro(request, id):
     values4 = list(rs4.values)
 
     copia = df.copy(deep=True)
-    precision = regresion(copia)
+    precision, regresion_entrenado = ModeloRegresion(copia)
     copia = df.copy(deep=True)
     precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(copia)
     day = 0
@@ -84,12 +66,19 @@ def detalleRegistro(request, id):
     prediccionArbol = ''
     if request.method == "POST":
         form = PrediccionArbolForm(request.POST)
+        formR = PrediccionRegresionForm(request.POST)
         if form.is_valid():
             day = form.cleaned_data["day"]
             month = form.cleaned_data["month"]
             sales = form.cleaned_data["sales"]
             quantity = form.cleaned_data["quantity"]
             prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity)
+        if formR.is_valid():
+            product_name = formR.cleaned_data["product_name"]
+            quantityR = formR.cleaned_data["quantity"]
+            dayR = form.cleaned_data["day"]
+            monthR = form.cleaned_data["month"]
+            prediccionRegresion = regresion(regresion_entrenado, product_name, quantityR, dayR, monthR)
     else:
         form = PrediccionArbolForm()
     copia = df.copy(deep=True)
@@ -116,10 +105,13 @@ def detalleRegistro(request, id):
     'data2': data2,
     'registro': registro,
     'precision': precision,
+    'precision_arbol': precision_arbol,
     'asociacion': asociacion,
     'grafo': grafo,
     'form': form,
-    'prediccionArbol': prediccionArbol
+    'prediccionArbol': prediccionArbol,
+    'prediccionRegresion': prediccionRegresion,
+    'formR': formR
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 
@@ -129,12 +121,16 @@ def crearRegistro(request):
 
     if form.is_valid():
         instance = form.save(commit=False)
-        archivo = pd.read_csv(instance.archivo_registro)
+        #enc = chardet.detect(instance.archivo_registro.read())
+        #print(enc)
+        archivo = instance.archivo_registro.read().decode('ISO-8859-1')
+        archivo = pd.read_csv(io.StringIO(archivo))
+        print(archivo)
         content = preprocesar(archivo).to_csv()
-        temp_file = ContentFile(content.encode('utf-8'))
+        temp_file = ContentFile(content.encode('ISO-8859-1'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
-        archivo = pd.read_csv(instance.archivo_registro)
-        graficar(instance.id, archivo)
+        archivo = instance.archivo_registro.read().decode('ISO-8859-1')
+        archivo = pd.read_csv(io.StringIO(archivo))
         instance.user = request.user
         instance.save()
         return redirect('csv:index')
@@ -144,10 +140,22 @@ def crearRegistro(request):
 @login_required(login_url="/login")
 def editarRegistro(request, id):
     registro = Registro.objects.get(id=id)
-    form = RegistroForm(request.POST or None, instance=registro)
+    form = RegistroForm(request.POST or None, request.FILES or None, instance=registro)
 
     if form.is_valid():
-        form.save()
+        instance = form.save(commit=False)
+        #enc = chardet.detect(instance.archivo_registro.read())
+        #print(enc)
+        archivo = instance.archivo_registro.read().decode('ISO-8859-1')
+        archivo = pd.read_csv(io.StringIO(archivo))
+        print(archivo)
+        content = preprocesar(archivo).to_csv()
+        temp_file = ContentFile(content.encode('ISO-8859-1'))
+        instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
+        archivo = instance.archivo_registro.read().decode('ISO-8859-1')
+        archivo = pd.read_csv(io.StringIO(archivo))
+        instance.user = request.user
+        instance.save()
         return redirect('csv:index')
 
     return render(request, 'csv/RegistroForm.html', {'form': form, 'registro': registro})
