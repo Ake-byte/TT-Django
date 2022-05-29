@@ -75,11 +75,12 @@ def detalleRegistro(request, id):
         if formR.is_valid():
             product_name = formR.cleaned_data["product_name"]
             quantityR = formR.cleaned_data["quantity"]
-            dayR = form.cleaned_data["day"]
-            monthR = form.cleaned_data["month"]
+            dayR = formR.cleaned_data["day"]
+            monthR = formR.cleaned_data["month"]
             prediccionRegresion = regresion(regresion_entrenado, product_name, quantityR, dayR, monthR)
     else:
         form = PrediccionArbolForm()
+        formR = PrediccionRegresionForm()
     copia = df.copy(deep=True)
     asociacion = reglasAsociacion(id, copia)
     grafo = get_reglas(id)
