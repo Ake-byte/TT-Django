@@ -2,13 +2,10 @@ from multiprocessing import context
 from django.shortcuts import redirect, render
 from django.core.files.base import ContentFile
 from django.contrib.auth.decorators import login_required
-<<<<<<< HEAD
 from usuarios.models import PermisoUsuario
-=======
 import chardet
 import io
 import csv
->>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
 
 from .forms import PrediccionRegresionForm, RegistroForm, PrediccionArbolForm
 from .models import Registro
@@ -43,14 +40,11 @@ def listadoRegistros(request):
 @login_required(login_url="/login")
 def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
-<<<<<<< HEAD
     usuario = request.user
     permisoUsuario = PermisoUsuario.objects.get(user=usuario)
     df = pd.read_csv(registro.archivo_registro)
-=======
     df = registro.archivo_registro.read().decode('ISO-8859-1')
     df = pd.read_csv(io.StringIO(df))
->>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
     rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(5)
     rs2 = df.groupby('Order Date')['Quantity'].sum().sort_values(ascending=False).head(5)
     rs3 = df.groupby('Product Name')['Sales'].sum().sort_values(ascending=False).head(5)
@@ -118,15 +112,12 @@ def detalleRegistro(request, id):
     'precision_arbol': precision_arbol,
     'asociacion': asociacion,
     'grafo': grafo,
-<<<<<<< HEAD
     'permisoUsuario': permisoUsuario,
-    'prediccionArbol': prediccionArbol
-=======
+    'prediccionArbol': prediccionArbol,
     'form': form,
     'prediccionArbol': prediccionArbol,
     'prediccionRegresion': prediccionRegresion,
     'formR': formR
->>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 
@@ -143,13 +134,10 @@ def crearRegistro(request):
         content = preprocesar(archivo).to_csv()
         temp_file = ContentFile(content.encode('ISO-8859-1'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
-<<<<<<< HEAD
         archivo = pd.read_csv(instance.archivo_registro)
         #graficar(instance.id, archivo)
-=======
         archivo = instance.archivo_registro.read().decode('ISO-8859-1')
         archivo = pd.read_csv(io.StringIO(archivo))
->>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
         instance.user = request.user
         instance.save()
         return redirect('csv:index')
