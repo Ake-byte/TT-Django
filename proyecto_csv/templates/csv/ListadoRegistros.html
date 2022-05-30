@@ -1,4 +1,5 @@
 {% extends 'csv/layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +13,8 @@
 <body>
     {% block body %}
     <div class="container py-4">
-        <a href="{% url 'csv:crearRegistro' %}" class="btn btn-success">Añadir Registro</a>
+        <a href="{% url 'csv:crearRegistro' %}" class="btn btn-success">Añadir Registro <img
+                src="{% static 'images/nuevoRegistro.png' %}" width="30" height="30" /></a>
     </div>
     <div class="container py-2">
         <div class="card">
@@ -20,12 +22,14 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            {% if request.user.is_superuser %}
                             <th>#</th>
                             <th>Usuario</th>
+                            {% endif %}
                             <th>Nombre</th>
                             <th>Descripción</th>
                             <th>Fecha de Creación</th>
-                            <th>Ver Predicción</th>
+                            <th>Ver</th>
                             <th>Editar</th>
                             <th>Eliminar</th>
                         </tr>
@@ -33,22 +37,24 @@
                     <tbody>
                         {% for csv in lista_registro %}
                         <tr>
+                            {% if request.user.is_superuser %}
                             <td>{{ csv.id }}</td>
                             <td>{{ csv.user }}</td>
+                            {% endif %}
                             <td>{{ csv.nombre_registro }}</td>
                             <td>{{ csv.descripcion_registro }}</td>
                             <td>{{ csv.fechaCreacion }}</td>
-                            <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">Ver</a></td>
-                            <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning">Editar</a></td>
+                            <td><a href="{% url 'csv:detalleRegistro' csv.id %}" class="btn btn-success">
+                                    <img src="{% static 'images/ver.png' %}" width="30" height="30" /></td></a>
+                            <td><a href="{% url 'csv:editarRegistro' csv.id %}" class="btn btn-warning"><img
+                                        src="{% static 'images/EditarRegistro.png' %}" width="30" height="30" /></a>
+                            </td>
                             <td>
-
                                 <form method="post">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-danger" name="csv-id"
-                                        value="{{csv.id}}">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger" name="csv-id" value="{{csv.id}}"><img
+                                            src="{% static 'images/eliminar.png' %}" width="30" height="30" /></button>
                                 </form>
-                                <!--{% if request.user == csv.user or request.user.is_superuser %}
-                                {% endif %}-->
                             </td>
                         </tr>
                         {% endfor %}

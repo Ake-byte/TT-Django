@@ -52,8 +52,14 @@ def listadoUsuarios(request):
             'lista_usuario': users,
         }
 
+        if request.method == "POST":
+            usuario_id = request.POST.get("usuario-id")
+            User = get_user_model()
+            usuario = User.objects.get(pk=usuario_id)
+            usuario.delete()
+
         return render(request, 'usuarios/ListadoUsuarios.html', context)
-    
+
     messages.error(
     request, f'Lo sentimos {request.user.username}, no tienes permisos para acceder a este recurso.')
     return redirect('csv:index')

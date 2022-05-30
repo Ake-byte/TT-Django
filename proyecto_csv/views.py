@@ -2,9 +2,9 @@ from multiprocessing import context
 from django.shortcuts import redirect, render
 from django.core.files.base import ContentFile
 from django.contrib.auth.decorators import login_required
-from usuarios.models import User, PermisoUsuario
+from usuarios.models import PermisoUsuario
 
-from .forms import RegistroForm
+from .forms import RegistroForm, PrediccionArbolForm
 from .models import Registro
 from .utils import *
 
@@ -42,7 +42,7 @@ def detalleRegistroAlex(request, id):
     copia = df.copy(deep=True)
     precision = regresion(copia)
     copia = df.copy(deep=True)
-    arbolDesicionRegresion(id, copia)
+    precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(id, copia)
     arbol = get_arbol(id)
     copia = df.copy(deep=True)
     asociacion = reglasAsociacion(id, copia)
@@ -80,8 +80,21 @@ def detalleRegistro(request, id):
     copia = df.copy(deep=True)
     precision = regresion(copia)
     copia = df.copy(deep=True)
-    arbolDesicionRegresion(id, copia)
-    arbol = get_arbol(id)
+    precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(copia)
+    day = 0
+    month = 0
+    sales = 0
+    prediccionArbol = ''
+    if request.method == "POST":
+        form = PrediccionArbolForm(request.POST)
+        if form.is_valid():
+            day = form.cleaned_data["day"]
+            month = form.cleaned_data["month"]
+            sales = form.cleaned_data["sales"]
+            quantity = form.cleaned_data["quantity"]
+            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity)
+    else:
+        form = PrediccionArbolForm()
     copia = df.copy(deep=True)
     asociacion = reglasAsociacion(id, copia)
     grafo = get_reglas(id)
@@ -106,10 +119,10 @@ def detalleRegistro(request, id):
     'data2': data2,
     'registro': registro,
     'precision': precision,
-    'arbol': arbol,
     'asociacion': asociacion,
     'grafo': grafo,
-    'permisoUsuario': permisoUsuario
+    'permisoUsuario': permisoUsuario,
+    'prediccionArbol': prediccionArbol
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 
@@ -124,7 +137,7 @@ def crearRegistro(request):
         temp_file = ContentFile(content.encode('utf-8'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
         archivo = pd.read_csv(instance.archivo_registro)
-        graficar(instance.id, archivo)
+        #graficar(instance.id, archivo)
         instance.user = request.user
         instance.save()
         return redirect('csv:index')

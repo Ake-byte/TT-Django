@@ -1,4 +1,5 @@
 {% extends 'csv/layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,12 +30,19 @@
                         <tr>
                             <td>{{ usuario.id }}</td>
                             <td>{{ usuario.username }}</td>
-                            <td><a href="{% url 'usuarios:verUsuario' usuario.id %}" class="btn btn-success">Ver</a>
+                            <td><a href="{% url 'usuarios:verUsuario' usuario.id %}" class="btn btn-success">
+                                    <img src="{% static 'images/ver.png' %}" width="30" height="30" />
+                                </a>
                             </td>
-                            <td><a href="{% url 'usuarios:editarUsuario' usuario.id %}"
-                                    class="btn btn-warning">Editar</a></td>
-                            <td><a href="#" class="btn btn-warning">Eliminar</a></td>
+                            <td><a href="{% url 'usuarios:editarUsuario' usuario.id %}" class="btn btn-warning"><img
+                                        src="{% static 'images/editarUsuario.png' %}" width="30" height="30" /></a></td>
                             <td>
+                                <form method="post">
+                                    {% csrf_token %}
+                                    <button type="submit" name="usuario-id" class="btn btn-danger"
+                                        value="{{usuario.id}}"><img src="{% static 'images/eliminarU.png' %}" width="30"
+                                            height="30" /></button>
+                                </form>
                             </td>
                         </tr>
                         {% endfor %}
