@@ -17,7 +17,12 @@
                     aria-controls="nav-home" aria-selected="true">Datos Generales</a>
                 <a class="nav-item nav-link" id="nav-graficas-tab" data-toggle="tab" href="#nav-graficas" role="tab"
                     aria-controls="nav-graficas" aria-selected="false">Resumen de Ventas</a>
+<<<<<<< HEAD
                 {% if permisoUsuario.tipoPermiso == 2 or permisoUsuario.tipoPermiso == 3 %}
+=======
+                <a class="nav-item nav-link" id="nav-regresion-tab" data-toggle="tab" href="#nav-regresion" role="tab"
+                    aria-controls="nav-regresion" aria-selected="false">Predicción (regresión)</a>
+>>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
                 <a class="nav-item nav-link" id="nav-arbol-tab" data-toggle="tab" href="#nav-arbol" role="tab"
                     aria-controls="nav-arbol" aria-selected="false">Predicción (árbol de decisión)</a>
                 {% endif %}
@@ -36,8 +41,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <h3>Precisión del modelo: </h3>
+                    <h3>Precisión del modelo de regresión: </h3>
                     <p>{{precision}}</p>
+                    <h3>Precisión del modelo de árbol: </h3>
+                    <p>{{precision_arbol}}</p>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-graficas" role="tabpanel" aria-labelledby="nav-graficas-tab">
@@ -102,6 +109,14 @@
                     </div>
                 </div>
             </div>
+            <div class="tab-pane fade" id="nav-regresion" role="tabpanel" aria-labelledby="nav-regresion-tab">
+                <form method="POST" enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{formR.as_p}}
+                    <button type="submit", name="prediccionRegresion">Hacer predicción</button>
+                </form>
+                {{prediccionRegresion}}
+            </div>
             <div class="tab-pane fade" id="nav-arbol" role="tabpanel" aria-labelledby="nav-arbol-tab">
                 <form method="POST" enctype='multipart/form-data'>
                     {% csrf_token %}
@@ -132,7 +147,7 @@
                     </table>
                 </div>
                 <div class="card" width='100%'>
-                    <img src=../../{{grafo}} />
+                    {{grafo}}
                 </div>
             </div>
         </div>

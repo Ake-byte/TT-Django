@@ -12,3 +12,9 @@ class PrediccionArbolForm(forms.Form):
     month = forms.IntegerField()
     sales = forms.FloatField()
     quantity = forms.IntegerField()
+
+class PrediccionRegresionForm(forms.Form):
+    product_name = forms.CharField()
+    quantity = forms.IntegerField()
+    day = forms.IntegerField()
+    month = forms.IntegerField()
