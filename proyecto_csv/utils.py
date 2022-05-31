@@ -19,7 +19,11 @@ import os
 def preprocesar(df):
     #df = df.drop(columns=["Row ID","Order ID","Ship Date","Ship Mode","Customer ID","Customer Name","Segment","City","State","Country","Postal Code","Market","Region","Product ID","Discount","Profit","Order Priority","Shipping Cost"])
     df = df[["Order Date", "Category", "Sub-Category", "Product Name", "Sales", "Quantity"]]
+    df["Sales"] = np.where((df["Sales"] >= df["Sales"].describe()['25%']) & (df["Sales"] <= df["Sales"].describe()['75%']), df['Sales'], np.NaN)
+    df["Quantity"] = np.where((df["Quantity"] >= df["Quantity"].describe()['25%']) & (df["Quantity"] <= df["Quantity"].describe()['75%']), df['Quantity'], np.NaN)
+
     df.dropna(inplace=True, how="any")
+
     df["Order Date"] = pd.to_datetime(df["Order Date"])
     df["Day"] = df["Order Date"].dt.day
     df["Month"] = df["Order Date"].dt.month
@@ -35,9 +39,11 @@ def ModeloRegresion(df):
     num_x = X_multiple.select_dtypes(include = ['int64', 'float64']).columns
     cat_x = X_multiple.select_dtypes(include = ['object']).columns
 
-    t = [('cat', OneHotEncoder(), cat_x), ('num', MinMaxScaler(), num_x)]
+    t = [('cat', OneHotEncoder(), cat_x)]
     ct = ColumnTransformer(transformers=t, remainder='passthrough')
     X_multiple = ct.fit_transform(X_multiple)
+
+    indexProductos = pd.DataFrame(ct.get_feature_names(), columns=['Product Name'])
     # Separo los datos de "train" en entrenamiento y prueba para probar los algoritmos
     X_train, X_test, y_train, y_test = train_test_split(X_multiple, y_multiple, test_size=0.2, random_state = 1)
     # Defino el algoritmo a utilizar
@@ -49,10 +55,17 @@ def ModeloRegresion(df):
     precision = lr_multiple.score(X_test, y_test)
     print(precision)
 
-    return precision, lr_multiple
+    return precision, lr_multiple, indexProductos
 
-def regresion(regresion_entrenado, product_name, quantity, day, month):
-    prediccionR = regresion_entrenado.predict([[product_name, quantity, day, month]])
+
+def regresion(regresion_entrenado, product_name, quantity, day, month, index_productos):
+    index = index_productos.loc[index_productos['Product Name'] == 'cat__x0_' + product_name].index[0]
+    arr = np.zeros(index_productos.shape[0])
+    arr[index] = 1
+    arr[-1] = month
+    arr[-2] = day
+    arr[-3] = quantity
+    prediccionR = regresion_entrenado.predict([arr])
 
     return prediccionR
 
@@ -96,7 +109,7 @@ def reglasAsociacion(id, df):
 
     basket_filter_plus = basket_encoded_plus[(basket_encoded_plus > 0).sum(axis=1) >= 2]
 
-    frequent_itemsets_plus = apriori(basket_filter_plus, min_support=0.003,use_colnames=True).sort_values('support', ascending=False).reset_index(drop=True)
+    frequent_itemsets_plus = apriori(basket_filter_plus, min_support=0.03,use_colnames=True).sort_values('support', ascending=False).reset_index(drop=True)
 
     frequent_itemsets_plus['length'] = frequent_itemsets_plus['itemsets'].apply(lambda x: len(x))
 
@@ -116,9 +129,9 @@ def reglasAsociacion(id, df):
     fig, ax=plt.subplots(figsize=(10,4))
     GA=nx.from_pandas_edgelist(association.head(10),source='antecedents',target='consequents')
     nx.draw(GA,with_labels=True,  node_size=100, arrows=True, pos=nx.circular_layout(GA))
-    fig.savefig(os.path.join(settings.BASE_DIR, f'asociacion{id}.jpg'))
+    fig.savefig(os.path.join(settings.BASE_DIR, f'static/images/reglas/asociacion{id}.jpg'))
 
     return association
 
 def get_reglas(id):
-    return f'static/images/asociacion{id}.jpg'
+    return f'static/images/reglas/asociacion{id}.jpg'

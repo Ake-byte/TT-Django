@@ -42,7 +42,6 @@ def detalleRegistro(request, id):
     registro = Registro.objects.get(pk=id)
     usuario = request.user
     permisoUsuario = PermisoUsuario.objects.get(user=usuario)
-    df = pd.read_csv(registro.archivo_registro)
     df = registro.archivo_registro.read().decode('ISO-8859-1')
     df = pd.read_csv(io.StringIO(df))
     rs1 = df.groupby('Product Name')['Quantity'].sum().sort_values(ascending=False).head(5)
@@ -60,8 +59,10 @@ def detalleRegistro(request, id):
     categories4 = list(rs4.index)
     values4 = list(rs4.values)
 
+    numero_filas = df.shape[0]
+
     copia = df.copy(deep=True)
-    precision, regresion_entrenado = ModeloRegresion(copia)
+    precision, regresion_entrenado, index_productos = ModeloRegresion(copia)
     copia = df.copy(deep=True)
     precision_arbol, arbol_entrenado = modeloArbolDesicionClasificacion(copia)
     day = month = sales = 0
@@ -81,7 +82,7 @@ def detalleRegistro(request, id):
             quantityR = formR.cleaned_data["quantity"]
             dayR = formR.cleaned_data["day"]
             monthR = formR.cleaned_data["month"]
-            prediccionRegresion = regresion(regresion_entrenado, product_name, quantityR, dayR, monthR)
+            prediccionRegresion = regresion(regresion_entrenado, product_name, quantityR, dayR, monthR, index_productos)
     else:
         form = PrediccionArbolForm()
         formR = PrediccionRegresionForm()
@@ -117,7 +118,8 @@ def detalleRegistro(request, id):
     'form': form,
     'prediccionArbol': prediccionArbol,
     'prediccionRegresion': prediccionRegresion,
-    'formR': formR
+    'formR': formR,
+    'numero_filas': numero_filas
     }
     return render(request, 'csv/DetalleRegistro2.html', context=context)
 
@@ -134,8 +136,7 @@ def crearRegistro(request):
         content = preprocesar(archivo).to_csv()
         temp_file = ContentFile(content.encode('ISO-8859-1'))
         instance.archivo_registro.save(f'{instance.archivo_registro}', temp_file)
-        archivo = pd.read_csv(instance.archivo_registro)
-        #graficar(instance.id, archivo)
+
         archivo = instance.archivo_registro.read().decode('ISO-8859-1')
         archivo = pd.read_csv(io.StringIO(archivo))
         instance.user = request.user

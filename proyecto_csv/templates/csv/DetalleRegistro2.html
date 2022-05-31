@@ -17,12 +17,9 @@
                     aria-controls="nav-home" aria-selected="true">Datos Generales</a>
                 <a class="nav-item nav-link" id="nav-graficas-tab" data-toggle="tab" href="#nav-graficas" role="tab"
                     aria-controls="nav-graficas" aria-selected="false">Resumen de Ventas</a>
-<<<<<<< HEAD
-                {% if permisoUsuario.tipoPermiso == 2 or permisoUsuario.tipoPermiso == 3 %}
-=======
                 <a class="nav-item nav-link" id="nav-regresion-tab" data-toggle="tab" href="#nav-regresion" role="tab"
                     aria-controls="nav-regresion" aria-selected="false">Predicción (regresión)</a>
->>>>>>> 08f63d7a3b7825adf6ba74e2d74ee4623e21e4df
+                {% if permisoUsuario.tipoPermiso == 2 or permisoUsuario.tipoPermiso == 3 %}
                 <a class="nav-item nav-link" id="nav-arbol-tab" data-toggle="tab" href="#nav-arbol" role="tab"
                     aria-controls="nav-arbol" aria-selected="false">Predicción (árbol de decisión)</a>
                 {% endif %}
@@ -38,6 +35,7 @@
                         <h1>{{ registro.nombre_registro }}</h1>
                         <h1>{{ registro.descripcion_registro }}</h1>
                         <h1>{{ registro.archivo_registro }}</h1>
+                        <h3>No. Filas después de la limpieza: {{ numero_filas }}
                     </div>
                 </div>
                 <div class="card">
@@ -147,7 +145,7 @@
                     </table>
                 </div>
                 <div class="card" width='100%'>
-                    {{grafo}}
+                    <img src=../../{{grafo}}/>
                 </div>
             </div>
         </div>
