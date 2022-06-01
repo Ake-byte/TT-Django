@@ -1,5 +1,6 @@
 from sre_parse import CATEGORIES
 from unicodedata import category
+from unittest import expectedFailure
 import numpy as np
 import pandas as pd
 import numpy as np
@@ -55,11 +56,14 @@ def ModeloRegresion(df):
     precision = lr_multiple.score(X_test, y_test)
     print(precision)
 
-    return precision, lr_multiple, indexProductos
+    return np.round(precision*100, decimals = 2), lr_multiple, indexProductos
 
 
 def regresion(regresion_entrenado, product_name, quantity, day, month, index_productos):
-    index = index_productos.loc[index_productos['Product Name'] == 'cat__x0_' + product_name].index[0]
+    try:
+        index = index_productos.loc[index_productos['Product Name'] == 'cat__x0_' + product_name].index[0]
+    except IndexError:
+        return "Producto no econtrado"
     arr = np.zeros(index_productos.shape[0])
     arr[index] = 1
     arr[-1] = month
@@ -67,7 +71,10 @@ def regresion(regresion_entrenado, product_name, quantity, day, month, index_pro
     arr[-3] = quantity
     prediccionR = regresion_entrenado.predict([arr])
 
-    return prediccionR
+    if prediccionR < 0:
+        return "No se pudo obtener la predicción. Pruebe con una cantida más alta."
+
+    return np.round(prediccionR[0], decimals=2)
 
 def get_arbol(id):
     return f'static/images/tree{id}.jpg'
@@ -83,13 +90,13 @@ def modeloArbolDesicionClasificacion(df):
 
     precision_arbol = arbol_entrenado.score(X_test, y_test)
 
-    return precision_arbol, arbol_entrenado
+    return np.round(precision_arbol*100, decimals=2), arbol_entrenado
 
 
 def arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity):
     prediccion = arbol_entrenado.predict([[day, month, sales, quantity]])
 
-    return prediccion
+    return np.round(prediccion[0], decimals=2)
 
 
 def reglasAsociacion(id, df):
@@ -97,7 +104,6 @@ def reglasAsociacion(id, df):
 
     basket_plus = (data_plus.groupby(['Order Date', 'Product Name'])['Quantity']
                 .sum().unstack().reset_index().fillna(0).set_index('Order Date'))
-    basket_plus
 
     def encode_units(x):
         if x <= 0:

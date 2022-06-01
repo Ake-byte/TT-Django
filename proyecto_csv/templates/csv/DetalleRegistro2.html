@@ -1,7 +1,9 @@
 {% extends 'csv/layout.html' %}
+{% load static %}
 {% block body %}
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -40,9 +42,9 @@
                 </div>
                 <div class="card">
                     <h3>Precisión del modelo de regresión: </h3>
-                    <p>{{precision}}</p>
+                    <p>{{precision}}&incare;</p>
                     <h3>Precisión del modelo de árbol: </h3>
-                    <p>{{precision_arbol}}</p>
+                    <p>{{precision_arbol}}&incare;</p>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-graficas" role="tabpanel" aria-labelledby="nav-graficas-tab">
@@ -108,20 +110,86 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-regresion" role="tabpanel" aria-labelledby="nav-regresion-tab">
-                <form method="POST" enctype='multipart/form-data'>
-                    {% csrf_token %}
-                    {{formR.as_p}}
-                    <button type="submit", name="prediccionRegresion">Hacer predicción</button>
-                </form>
-                {{prediccionRegresion}}
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Nombre del producto</label>
+                                    {{ formR.product_name }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Cantidad</label>
+                                    {{ formR.quantity }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Día</label>
+                                    {{ formR.day }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Mes</label>
+                                    {{ formR.month }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <button type="submit", name="prediccionRegresion" class="col-sm-3 btn btn-success">Hacer predicción</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <p>Predicción ventas: {{prediccionRegresion}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="nav-arbol" role="tabpanel" aria-labelledby="nav-arbol-tab">
-                <form method="POST" enctype='multipart/form-data'>
-                    {% csrf_token %}
-                    {{form.as_p}}
-                    <button type="submit", name="prediccionArbolDesicionClasificacion">Hacer predicción</button>
-                </form>
-                {{prediccionArbol}}
+                <div class="card">
+                    <div class="card-body">
+                        <form method="POST" enctype='multipart/form-data'>
+                            {% csrf_token %}
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Día</label>
+                                    {{ form.day }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Mes</label>
+                                    {{ form.month }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Ventas</label>
+                                    {{ form.sales }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="col-sm-3 col-form-label">Cantidad</label>
+                                    {{ form.quantity }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <button type="submit", name="prediccionArbolDesicionClasificacion" class="col-sm-3 btn btn-success">Hacer predicción</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="row">
+                            <p>Predicción producto: {{prediccionArbol}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="nav-reglas" role="tabpanel" aria-labelledby="nav-reglas-tab">
                 <div class="table-responsive">
