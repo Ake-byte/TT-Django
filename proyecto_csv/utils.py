@@ -80,7 +80,7 @@ def get_arbol(id):
     return f'static/images/tree{id}.jpg'
 
 def modeloArbolDesicionClasificacion(df):
-    X = df[["Day", "Month", "Sales", "Quantity"]]
+    X = df[["Day", "Month", "Quantity"]]
     Y = df[["Product Name"]]
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, train_size=0.80 ,random_state = 1)
@@ -93,10 +93,10 @@ def modeloArbolDesicionClasificacion(df):
     return np.round(precision_arbol*100, decimals=2), arbol_entrenado
 
 
-def arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity):
-    prediccion = arbol_entrenado.predict([[day, month, sales, quantity]])
+def arbolDesicionClasificacion(arbol_entrenado, day, month, quantity):
+    prediccion = arbol_entrenado.predict([[day, month, quantity]])
 
-    return np.round(prediccion[0], decimals=2)
+    return prediccion[0]
 
 
 def reglasAsociacion(id, df):

@@ -74,9 +74,8 @@ def detalleRegistro(request, id):
         if form.is_valid():
             day = form.cleaned_data["day"]
             month = form.cleaned_data["month"]
-            sales = form.cleaned_data["sales"]
             quantity = form.cleaned_data["quantity"]
-            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, sales, quantity)
+            prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, quantity)
         if formR.is_valid():
             product_name = formR.cleaned_data["product_name"]
             quantityR = formR.cleaned_data["quantity"]

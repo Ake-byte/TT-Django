@@ -10,7 +10,6 @@ class RegistroForm(forms.ModelForm):
 class PrediccionArbolForm(forms.Form):
     day = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(31)])
     month = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
-    sales = forms.FloatField(validators=[MinValueValidator(1.0), MaxValueValidator(100000.0)])
     quantity = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
 
 class PrediccionRegresionForm(forms.Form):
