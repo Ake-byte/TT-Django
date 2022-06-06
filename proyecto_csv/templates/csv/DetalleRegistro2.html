@@ -3,7 +3,7 @@
 {% block body %}
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -33,18 +33,53 @@
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <div class="card">
                     <div class="card-body">
-                        <h1>{{ registro.id }}</h1>
-                        <h1>{{ registro.nombre_registro }}</h1>
-                        <h1>{{ registro.descripcion_registro }}</h1>
-                        <h1>{{ registro.archivo_registro }}</h1>
-                        <h3>No. Filas después de la limpieza: {{ numero_filas }}
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Nombre del Registro</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ registro.nombre_registro }}" class="form-control"
+                                            readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Descripción del Registro</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ registro.descripcion_registro }}"
+                                            class="form-control" readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Nombre del Archivo .csv</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ registro.archivo_registro }}" class="form-control"
+                                            readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">No. Filas después de la limpieza:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ numero_filas }}" class="form-control" readonly />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Precisión del modelo de regresión:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ precision }}" class="form-control" readonly />
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-4 col-form-label">Precisión del modelo de árbol:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" value="{{ precision_arbol }}" class="form-control"
+                                            readonly />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <h3>Precisión del modelo de regresión: </h3>
-                    <p>{{precision}}&incare;</p>
-                    <h3>Precisión del modelo de árbol: </h3>
-                    <p>{{precision_arbol}}&incare;</p>
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-graficas" role="tabpanel" aria-labelledby="nav-graficas-tab">
@@ -140,7 +175,8 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <button type="submit", name="prediccionRegresion" class="col-sm-3 btn btn-success">Hacer predicción</button>
+                                    <button type="submit" , name="prediccionRegresion"
+                                        class="col-sm-3 btn btn-success">Hacer predicción</button>
                                 </div>
                             </div>
                         </form>
@@ -175,7 +211,8 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <button type="submit", name="prediccionArbolDesicionClasificacion" class="col-sm-3 btn btn-success">Hacer predicción</button>
+                                    <button type="submit" , name="prediccionArbolDesicionClasificacion"
+                                        class="col-sm-3 btn btn-success">Hacer predicción</button>
                                 </div>
                             </div>
                         </form>
@@ -207,7 +244,7 @@
                     </table>
                 </div>
                 <div class="card" width='100%'>
-                    <img src=../../{{grafo}}/>
+                    <img src=../../{{grafo}} />
                 </div>
             </div>
         </div>
@@ -226,7 +263,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Sales in Thousand'
+                text: 'Top 5'
             },
             xAxis: {
                 categories: _categories,
@@ -235,7 +272,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Sales in thousands'
+                    text: 'Unidades Vendidas'
                 }
             },
             tooltip: {
@@ -253,7 +290,7 @@
                 }
             },
             series: [{
-                name: 'Total Sold Units',
+                name: 'Productos',
                 data: _values
 
             }]
@@ -268,7 +305,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Sales in Thousand'
+                text: 'Top 5'
             },
             xAxis: {
                 categories: _categories,
@@ -277,7 +314,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Sales in thousands'
+                    text: 'Unidades Vendidas'
                 }
             },
             tooltip: {
@@ -295,7 +332,7 @@
                 }
             },
             series: [{
-                name: 'Total Sold Units',
+                name: 'Fechas',
                 data: _values
 
             }]
@@ -310,7 +347,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Sales in Thousand'
+                text: 'Top 5'
             },
             xAxis: {
                 categories: _categories,
@@ -319,7 +356,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Sales in thousands'
+                    text: 'Ventas'
                 }
             },
             tooltip: {
@@ -337,7 +374,7 @@
                 }
             },
             series: [{
-                name: 'Total Sold Units',
+                name: 'Productos',
                 data: _values
 
             }]
@@ -352,7 +389,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Sales in Thousand'
+                text: 'Top 5'
             },
             xAxis: {
                 categories: _categories,
@@ -361,7 +398,7 @@
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Sales in thousands'
+                    text: 'Ventas'
                 }
             },
             tooltip: {
@@ -379,7 +416,7 @@
                 }
             },
             series: [{
-                name: 'Total Sold Units',
+                name: 'Productos',
                 data: _values
 
             }]
@@ -397,7 +434,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Ventas por Categoría'
+                text: 'Porcentaje de Ventas'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -413,7 +450,7 @@
                 }
             },
             series: [{
-                name: 'Sales',
+                //name: 'Sales',
                 colorByPoint: true,
                 data: _values
             }]
@@ -431,7 +468,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Ventas por Sub-Categoría'
+                text: 'Porcentaje de Ventas'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -447,7 +484,7 @@
                 }
             },
             series: [{
-                name: 'Sales',
+                //name: 'Sales',
                 colorByPoint: true,
                 data: _values
             }]

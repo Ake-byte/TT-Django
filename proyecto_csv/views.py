@@ -16,8 +16,12 @@ import pandas as pd
 
 @login_required(login_url="/login")
 def index(request):
-    
-    return render(request, 'csv/index.html')
+    if request.user.is_superuser:
+        return render(request, 'csv/index.html')
+        
+    usuario = request.user
+    permisoUsuario = PermisoUsuario.objects.get(user=usuario)
+    return render(request, 'csv/index.html', {'permisoUsuario': permisoUsuario})
 
 @login_required(login_url="/login")
 def listadoRegistros(request):
