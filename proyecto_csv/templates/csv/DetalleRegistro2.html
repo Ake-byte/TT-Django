@@ -28,7 +28,8 @@
                 <a class="nav-item nav-link" id="nav-reglas-tab" data-toggle="tab" href="#nav-reglas" role="tab"
                     aria-controls="nav-reglas" aria-selected="false">Sugerencias de Promoción (reglas de asociación)</a>
                 <a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab"
-                    aria-controls="nav-info" aria-selected="false"><img src="{% static 'images/info.png' %}" width="30" height="30"/></a>
+                    aria-controls="nav-info" aria-selected="false"><img src="{% static 'images/info.png' %}" width="30"
+                        height="30" /></a>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
@@ -69,13 +70,13 @@
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label">Precisión del modelo de regresión:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" value="{{ precision }}" class="form-control" readonly />
+                                        <input type="text" value="{{ precision }}%" class="form-control" readonly />
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-sm-4 col-form-label">Precisión del modelo de árbol:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" value="{{ precision_arbol }}" class="form-control"
+                                        <input type="text" value="{{ precision_arbol }}%" class="form-control"
                                             readonly />
                                     </div>
                                 </div>
@@ -88,7 +89,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Cantidad de Productos vendidos
+                            <div class="card-header">Top 5
                                 <div class="card-body">
                                     <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                 </div>
@@ -97,7 +98,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Cantidad de Productos vendidos por Fecha
+                            <div class="card-header">Top 5
                                 <div class="card-body">
                                     <div id="container2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                 </div>
@@ -106,7 +107,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Productos vendidos por categoría
+                            <div class="card-header">Porcentaje de Ventas
                                 <div class="card-body">
                                     <div id="piechart"
                                         style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
@@ -118,7 +119,7 @@
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Productos con mayores ingresos
+                            <div class="card-header">Top 5
                                 <div class="card-body">
                                     <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                 </div>
@@ -127,7 +128,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Productos con mayores ingresos por fecha
+                            <div class="card-header">Top 5
                                 <div class="card-body">
                                     <div id="container4" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                                 </div>
@@ -136,7 +137,7 @@
                     </div>
                     <div class="col-sm-4">
                         <div class="card">
-                            <div class="card-header">Productos vendidos por subcategoría
+                            <div class="card-header">Porcentaje de Ventas
                                 <div class="card-body">
                                     <div id="piechart2"
                                         style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
@@ -147,8 +148,11 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="nav-regresion" role="tabpanel" aria-labelledby="nav-regresion-tab">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card-body">
+
+                    Llena los siguientes campos para obtener el producto potencial que se puede vender en el día
+                    deseado.
+                    <div>
                         <form method="POST" enctype='multipart/form-data'>
                             {% csrf_token %}
                             <div class="form-group row">
@@ -187,9 +191,15 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
             <div class="tab-pane fade" id="nav-arbol" role="tabpanel" aria-labelledby="nav-arbol-tab">
-                <div class="card">
+                <div class="card-body">
+                    Llena los siguientes campos para obtener el producto potencial que se puede vender en el día
+                    deseado.
+                </div>
+                <div class="col-sm-8">
                     <div class="card-body">
                         <form method="POST" enctype='multipart/form-data'>
                             {% csrf_token %}
@@ -214,7 +224,7 @@
                             <div class="form-group row">
                                 <div class="col-sm-6">
                                     <button type="submit" , name="prediccionArbolDesicionClasificacion"
-                                        class="col-sm-3 btn btn-success">Hacer predicción</button>
+                                        class="col-sm-4 btn btn-success">Hacer predicción</button>
                                 </div>
                             </div>
                         </form>
@@ -223,6 +233,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="tab-pane fade" id="nav-reglas" role="tabpanel" aria-labelledby="nav-reglas-tab">
                 <div class="table-responsive">
@@ -258,9 +269,9 @@
                                     <label class="col-sm-4 col-form-label">Soporte</label>
                                     <div class="col-sm-6" align="justify">
                                         <p>
-                                            El soporte es la frecuencia relativa con la que se observa la regla. 
-                                            Es decir, un soporte de 0.15 indica que el antecedente y el consecuente 
-                                            se observan a la vez en el 15% de las transacciones. Este indicado mide 
+                                            El soporte es la frecuencia relativa con la que se observa la regla.
+                                            Es decir, un soporte de 0.15 indica que el antecedente y el consecuente
+                                            se observan a la vez en el 15% de las transacciones. Este indicado mide
                                             la fuerza de la regla.
                                         </p>
                                     </div>
@@ -273,8 +284,9 @@
                                     <label class="col-sm-4 col-form-label">Confianza</label>
                                     <div class="col-sm-6" align="justify">
                                         <p>
-                                            La confianza es el porcentaje de las transacciones en las que aparece el 
-                                            antecedente en la que también aparece el consecuente. Lo que mide este indicador 
+                                            La confianza es el porcentaje de las transacciones en las que aparece el
+                                            antecedente en la que también aparece el consecuente. Lo que mide este
+                                            indicador
                                             es la fiabilidad de la regla.
                                         </p>
                                     </div>
@@ -287,14 +299,22 @@
                                     <label class="col-sm-4 col-form-label">Elevación</label>
                                     <div class="col-sm-6" align="justify">
                                         <p>
-                                            Incremento de la probabilidad de venta del consecuente sabiendo que el cliente compró el antecedente. 
-                                            Entre mayor sea el valor, más alta es la probabilidad de la existencia de una transacción.
+                                            Incremento de la probabilidad de venta del consecuente sabiendo que el
+                                            cliente compró el antecedente.
+                                            Entre mayor sea el valor, más alta es la probabilidad de la existencia de
+                                            una transacción.
                                             La interpretación del valor de lift es la siguiente:
                                         </p>
                                         <ul>
-                                            <li>Elevación > 1: La probabilidad del consecuente aumentó gracias a que se dio el antecedente, es decir, indica que x e y están correlacionados positivamente.</li>
-                                            <li>Elevación = 1: La probabilidad del consecuente no se vio afectada por el antecedente, es decir indica que x e y son independientes, o que la regla no representa un patrón real.</li>
-                                            <li>Elevación < 1: La probabilidad del consecuente disminuyó debido a que se dio el antecedente, es decir, indica que x e y están correlacionados negativamente.</li>
+                                            <li>Elevación > 1: La probabilidad del consecuente aumentó gracias a que se
+                                                dio el antecedente, es decir, indica que x e y están correlacionados
+                                                positivamente.</li>
+                                            <li>Elevación = 1: La probabilidad del consecuente no se vio afectada por el
+                                                antecedente, es decir indica que x e y son independientes, o que la
+                                                regla no representa un patrón real.</li>
+                                            <li>Elevación < 1: La probabilidad del consecuente disminuyó debido a que se
+                                                    dio el antecedente, es decir, indica que x e y están correlacionados
+                                                    negativamente.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -306,8 +326,10 @@
                                     <label class="col-sm-4 col-form-label">Apalancamiento</label>
                                     <div class="col-sm-6" align="justify">
                                         <p>
-                                            Calcula la diferencia que existe entre la frecuencia con la que aparecen juntos los ítems
-                                            contenidos en una regla y la frecuencia con la que se esperaría que estos aparecieran si fueran independientes.</br>
+                                            Calcula la diferencia que existe entre la frecuencia con la que aparecen
+                                            juntos los ítems
+                                            contenidos en una regla y la frecuencia con la que se esperaría que estos
+                                            aparecieran si fueran independientes.</br>
                                             Rango:[-1, 1]</br>
                                             Un valor igual a cero indica que los ítems son independientes
                                         </p>
@@ -321,18 +343,24 @@
                                     <label class="col-sm-4 col-form-label">Convicción</label>
                                     <div class="col-sm-6" align="justify">
                                         <p>
-                                            Es una medida que evalúa el grado en que el término antecedente influye en la ocurrencia del término
-                                            consecuente de una regla de asociación. A diferencia de la elevación, convicción es una medida unidireccional, 
-                                            o sea, el resultado de Conviction(antecedente → consecuente) va a ser diferente del de 
+                                            Es una medida que evalúa el grado en que el término antecedente influye en
+                                            la ocurrencia del término
+                                            consecuente de una regla de asociación. A diferencia de la elevación,
+                                            convicción es una medida unidireccional,
+                                            o sea, el resultado de Conviction(antecedente → consecuente) va a ser
+                                            diferente del de
                                             conviction(consecuente → antecedente).</br>
                                             Rango:[0, ∞]</br>
                                             La interpretación del valor de la convicción es la siguiente:
                                         </p>
                                         <ul>
-                                            <li>Un valor alto en la convicción, indica que el consecuente depende en gran medida del antecedente.</li>
-                                            <li>Si la confianza de una regla es 1, el denominador de la fórmula se vuelve 0, por tanto, el valor de la convicción se vuelve infinito, que sería tomado como NA.</li>
+                                            <li>Un valor alto en la convicción, indica que el consecuente depende en
+                                                gran medida del antecedente.</li>
+                                            <li>Si la confianza de una regla es 1, el denominador de la fórmula se
+                                                vuelve 0, por tanto, el valor de la convicción se vuelve infinito, que
+                                                sería tomado como NA.</li>
                                             <li>Si la convicción es igual a 1, indica que x e y son independientes.</li>
-                                        <ul>
+                                            <ul>
                                     </div>
                                 </div>
                             </div>
@@ -356,7 +384,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Top 5'
+                text: 'Cantidad de Productos Vendidos'
             },
             xAxis: {
                 categories: _categories,
@@ -398,7 +426,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Top 5'
+                text: 'Cantidad de Productos Vendidos por Fecha'
             },
             xAxis: {
                 categories: _categories,
@@ -440,7 +468,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Top 5'
+                text: 'Productos con Mayores Ingresos'
             },
             xAxis: {
                 categories: _categories,
@@ -482,7 +510,7 @@
                 type: 'column'
             },
             title: {
-                text: 'Top 5'
+                text: 'Mayores Ingresos por Fecha'
             },
             xAxis: {
                 categories: _categories,
@@ -509,7 +537,7 @@
                 }
             },
             series: [{
-                name: 'Productos',
+                name: 'Fechas',
                 data: _values
 
             }]
@@ -527,7 +555,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Porcentaje de Ventas'
+                text: 'Productos Vendidos por Categoría'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -561,7 +589,7 @@
                 type: 'pie'
             },
             title: {
-                text: 'Porcentaje de Ventas'
+                text: 'Productos Vendidos por Subcategoría'
             },
             tooltip: {
                 pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
