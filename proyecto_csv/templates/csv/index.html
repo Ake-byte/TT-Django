@@ -1,4 +1,5 @@
 {% extends 'csv/layout.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,144 +12,199 @@
 
 <body>
     {% block body %}
-    <section id="services" class="features-area">
-        <div class="container py-2">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section-title text-center pb-10">
-                        <h3 class="title">Servicios Disponibles</h3>
-                        <p class="text">¡Lleva tu negocio al próximo nivel!</p>
-                    </div> <!-- row -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Análisis de Datos en Tiempo Real</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-brush"></i>
+    <div class="container">
+        <section id="services" class="features-area">
+            <div class="container py-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 col-md-10">
+                        <div class="section-title text-center pb-10">
+                            <h3 class="title">Servicios Disponibles</h3>
+                            <p class="text">¡Lleva tu negocio al próximo nivel!</p>
+                        </div> <!-- row -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-7 col-sm-9">
+                        <div class="single-features mt-40">
+                            <div class="features-title-icon d-flex justify-content-between">
+                                <h4 class="features-title"><a href="#">Análisis de Datos en Tiempo Real</a></h4>
+                                <div class="features-icon">
+                                    <i class="lni lni-brush"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Tus registros de ventas son información valiosa. Con el apoyo de técnicas de
-                                Minería de Datos, encuentra los patrones y tendencias útiles.</p>
-                            <a class="features-btn" href="#">VER MÁS</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Interacción Intuitiva</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-layout"></i>
+                            <div class="features-content">
+                                <p class="text">Tus registros de ventas son información valiosa. Con el apoyo de
+                                    técnicas de
+                                    Minería de Datos, encuentra los patrones y tendencias útiles.</p>
+                                <a class="features-btn" href="#">VER MÁS</a>
                             </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Adjunta tu archivo de ventas en formato .csv y como respuesta obtendrás un
-                                análisis que te ayudará en tu proceso de toma de decisiones para impulsar tu negocio.
-                            </p>
-                            <a class="features-btn" href="#">VER MÁS</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-features mt-40">
-                        <div class="features-title-icon d-flex justify-content-between">
-                            <h4 class="features-title"><a href="#">Fácil Interpretación</a></h4>
-                            <div class="features-icon">
-                                <i class="lni lni-bolt"></i>
+                        </div> <!-- single features -->
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9">
+                        <div class="single-features mt-40">
+                            <div class="features-title-icon d-flex justify-content-between">
+                                <h4 class="features-title"><a href="#">Interacción Intuitiva</a></h4>
+                                <div class="features-icon">
+                                    <i class="lni lni-layout"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="features-content">
-                            <p class="text">Por medio de una serie de gráficos,
-                                podrás ver de forma clara y sencilla, áreas de oportunidad en tu negocio.</p>
-                            <a class="features-btn" href="#">VER MÁS</a>
-                        </div>
-                    </div> <!-- single features -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    <br>
-    <br>
-    <section id="pricing" class="pricing-area ">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section-title text-center pb-25">
-                        <h3 class="title">Venta del Servicio</h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="pricing-style mt-30">
-                        <div class="pricing-icon text-center">
-                            <br>
-                        </div>
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">Prueba gratuita</h5>
-                        </div>
-                        <div class="pricing-list">
-                            <ul>
-                                <li><i class="lni lni-check-mark-circle"></i> Funcionalidades Limitadas.</li>
-                                <li><i class="lni lni-check-mark-circle"></i> Anuncios.</li>
-                            </ul>
-                        </div>
-                    </div> <!-- pricing style one -->
-                </div>
+                            <div class="features-content">
+                                <p class="text">Adjunta tu archivo de ventas en formato .csv y como respuesta obtendrás
+                                    un
+                                    análisis que te ayudará en tu proceso de toma de decisiones para impulsar tu
+                                    negocio.
+                                </p>
+                                <a class="features-btn" href="#">VER MÁS</a>
+                            </div>
+                        </div> <!-- single features -->
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-9">
+                        <div class="single-features mt-40">
+                            <div class="features-title-icon d-flex justify-content-between">
+                                <h4 class="features-title"><a href="#">Fácil Interpretación</a></h4>
+                                <div class="features-icon">
+                                    <i class="lni lni-bolt"></i>
+                                </div>
+                            </div>
+                            <div class="features-content">
+                                <p class="text">Por medio de una serie de gráficos,
+                                    podrás ver de forma clara y sencilla, áreas de oportunidad en tu negocio.</p>
+                                <a class="features-btn" href="#">VER MÁS</a>
+                            </div>
+                        </div> <!-- single features -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section>
+        <br>
+        <br>
 
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="pricing-style mt-30">
-                        <div class="pricing-icon text-center">
-                            <br>
+        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Venta del Servicio</h1>
+            <p class="fs-5 text-muted">Consulta los planes que tenemos para ti.
+            </p>
+        </div>
+        </header>
+
+        <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 ">
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Prueba gratuita</h4>
                         </div>
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">Servicio de Pago</h5>
-                            <p class="month"><span class="price">$ 1260</span>/mes</p>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">$0<small
+                                    class="text-muted fw-light">/mes</small>
+                            </h1>
+                            <ul>
+                                <li><i class="lni lni-check-mark-circle"></i> Funcionalidades Limitadas</li>
+                                <li><i class="lni lni-check-mark-circle"></i> Anuncios</li>
+                            </ul>
+                            {% if permisoUsuario.tipoPermiso == 1 %}
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Cuentas con este
+                                plan</button>
+                            {% endif %}
                         </div>
-                        <div class="pricing-list">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">Servicio de Pago</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">$1260<small
+                                    class="text-muted fw-light">/mes</small>
+                            </h1>
                             <ul>
                                 <li><i class="lni lni-check-mark-circle"></i>Pago inicial y posteriormente el pago de
-                                    una renta anual.</li>
-                                <li><i class="lni lni-check-mark-circle"></i>Sin funciones limitadas.</li>
-                                <li><i class="lni lni-check-mark-circle"></i>Con opción a máximo 10 predicciones al año.
+                                    una renta anual</li>
+                                <li><i class="lni lni-check-mark-circle"></i>Sin funciones limitadas</li>
+                                <li><i class="lni lni-check-mark-circle"></i>Con opción a máximo 10 predicciones al año
                                 </li>
                             </ul>
+                            {% if permisoUsuario.tipoPermiso == 2 %}
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Cuentas con este
+                                plan</button>
+                            {% endif %}
                         </div>
-                        <div class="pricing-btn rounded-buttons text-center">
-                        </div>
-                    </div> <!-- pricing style one -->
+                    </div>
                 </div>
-
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="pricing-style mt-30">
-                        <div class="pricing-icon text-center">
-                            <br>
+                <div class="col">
+                    <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                        <div class="card-header py-3 text-white bg-primary border-primary">
+                            <h4 class="my-0 fw-normal">Servicio Premium</h4>
                         </div>
-                        <div class="pricing-header text-center">
-                            <h5 class="sub-title">Servicio Premium</h5>
-                            <p class="month"><span class="price">$ 2516</span>/mes</p>
-                        </div>
-                        <div class="pricing-list">
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title text-center">$2516<small
+                                    class="text-muted fw-light">/mes</small>
+                            </h1>
                             <ul>
                                 <li><i class="lni lni-check-mark-circle"></i> Con un pago inicial y posteriormente el
-                                    pago de una renta anual a un mayor precio.</li>
-                                <li><i class="lni lni-check-mark-circle"></i> Servicios ilimitados.</li>
+                                    pago de una renta anual a un mayor precio</li>
+                                <li><i class="lni lni-check-mark-circle"></i> Servicios ilimitados</li>
                                 <li><i class="lni lni-check-mark-circle"></i> Acceso a opciones experimentales o futuras
-                                    mejoras.</li>
+                                    mejoras</li>
                             </ul>
+                            {% if permisoUsuario.tipoPermiso == 3 %}
+                            <button type="button" class="w-100 btn btn-lg btn-outline-primary">Cuentas con este
+                                plan</button>
+                            {% endif %}
                         </div>
-                        <div class="pricing-btn rounded-buttons text-center">
-                        </div>
-                    </div> <!-- pricing style one -->
+                    </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+            </div>
 
+            <h2 class="display-6 text-center mb-4">¡Compara los planes!</h2>
+
+            <div class="table-responsive">
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th style="width: 34%;"></th>
+                            <th style="width: 22%;">Prueba gratuita</th>
+                            <th style="width: 22%;">Servicio de Pago</th>
+                            <th style="width: 22%;">Servicio Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Resúmen de Ventas</th>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Predicción 1.0</th>
+                            <td></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="text-start">Predicción 2.0</th>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check" />
+                                </svg></td>
+                            <td><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#check" />
+                                </svg></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="text-start">Sugerencia de Promociones</th>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                            <td><img src="{% static 'images/cheque.png' %}" width="30" height="30" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
     {% endblock %}
 </body>
 

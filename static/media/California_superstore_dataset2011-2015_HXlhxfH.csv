@@ -1,0 +1,722 @@
+,Order Date,Category,Sub-Category,Product Name,Sales,Quantity,Day,Month,Year
+1,2011-01-04,Office Supplies,Labels,Avery 490,29.6,2.0,4,1,2011
+4,2011-01-09,Office Supplies,Art,"BOSTON Model 1800 Electric Pencil Sharpeners, Putty/Woodgrain",53.94,3.0,9,1,2011
+5,2011-01-11,Office Supplies,Labels,Avery 475,44.4,3.0,11,1,2011
+6,2011-01-11,Office Supplies,Paper,Staples,21.4,5.0,11,1,2011
+7,2011-01-12,Furniture,Furnishings,"Floodlight Indoor Halogen Bulbs, 1 Bulb per Pack, 60 Watts",58.2,3.0,12,1,2011
+9,2011-02-11,Technology,Phones,AT&T CL82213,46.384,2.0,11,2,2011
+12,2011-03-04,Technology,Accessories,Logitech G600 MMO Gaming Mouse,159.98,2.0,4,3,2011
+13,2011-03-04,Technology,Accessories,Enermax Briskie RF Wireless Keyboard and Mouse Combo,62.31,3.0,4,3,2011
+16,2011-03-10,Furniture,Chairs,"Global Deluxe Stacking Chair, Gray",122.352,3.0,10,3,2011
+20,2011-04-10,Office Supplies,Binders,GBC Recycled Regency Composition Covers,95.648,2.0,10,4,2011
+25,2011-04-11,Furniture,Furnishings,"Executive Impressions 12"" Wall Clock",35.34,2.0,11,4,2011
+26,2011-04-11,Office Supplies,Binders,Cardinal EasyOpen D-Ring Binders,21.936,3.0,11,4,2011
+30,2011-05-02,Office Supplies,Paper,"Message Book, Standard Line ""While You Were Out"", 5 1/2"" X 4"", 200 Sets/Book",34.24,4.0,2,5,2011
+31,2011-05-02,Office Supplies,Binders,GBC Recycled Grain Textured Covers,82.896,3.0,2,5,2011
+34,2011-05-08,Office Supplies,Paper,Xerox 1913,110.96,2.0,8,5,2011
+35,2011-05-08,Office Supplies,Art,Boston KS Multi-Size Manual Pencil Sharpener,45.98,2.0,8,5,2011
+36,2011-05-08,Office Supplies,Paper,"Adams Phone Message Book, Professional, 400 Message Capacity, 5 3/6” x 11”",20.94,3.0,8,5,2011
+39,2011-05-10,Technology,Accessories,Plantronics Audio 478 Stereo USB Headset,99.98,2.0,10,5,2011
+42,2011-05-12,Office Supplies,Paper,Xerox 1933,49.12,4.0,12,5,2011
+46,2011-06-04,Office Supplies,Binders,"Avery Trapezoid Ring Binder, 3"" Capacity, Black, 1040 sheets",65.568,2.0,4,6,2011
+47,2011-06-04,Office Supplies,Art,Boston Home & Office Model 2000 Electric Pencil Sharpeners,70.95,3.0,4,6,2011
+49,2011-06-04,Furniture,Furnishings,Tenex B1-RE Series Chair Mats for Low Pile Carpets,91.96,2.0,4,6,2011
+61,2011-07-09,Office Supplies,Binders,Avery Legal 4-Ring Binder,83.92,5.0,9,7,2011
+62,2011-07-09,Office Supplies,Supplies,"Acme Design Line 8"" Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8"" Cut",27.36,4.0,9,7,2011
+63,2011-07-09,Office Supplies,Paper,"Message Book, Wirebound, Four 5 1/2"" X 4"" Forms/Pg., 200 Dupl. Sets/Book",20.56,2.0,9,7,2011
+65,2011-07-12,Office Supplies,Paper,Green Bar Computer Printout Paper,164.88,3.0,12,7,2011
+75,2011-08-08,Office Supplies,Appliances,Fellowes Superior 10 Outlet Split Surge Protector,76.12,2.0,8,8,2011
+76,2011-08-09,Office Supplies,Appliances,"Holmes Replacement Filter for HEPA Air Cleaner, Medium Room",56.65,5.0,9,8,2011
+77,2011-08-09,Technology,Accessories,Logitech Wireless Touch Keyboard K400,49.98,2.0,9,8,2011
+82,2011-08-12,Furniture,Furnishings,DAX Natural Wood-Tone Poster Frame,79.44,3.0,12,8,2011
+83,2011-08-12,Furniture,Furnishings,Luxo Economy Swing Arm Lamp,39.88,2.0,12,8,2011
+84,2011-09-05,Technology,Accessories,Sony Micro Vault Click 16 GB USB 2.0 Flash Drive,167.97,3.0,5,9,2011
+85,2011-09-05,Technology,Accessories,Kingston Digital DataTraveler 32GB USB 2.0,67.8,4.0,5,9,2011
+89,2011-09-06,Office Supplies,Appliances,Belkin F5C206VTEL 6 Outlet Surge,114.9,5.0,6,9,2011
+91,2011-09-06,Office Supplies,Art,Deluxe Chalkboard Eraser Cleaner,23.1,2.0,6,9,2011
+97,2011-09-07,Office Supplies,Paper,Xerox 1967,32.4,5.0,7,9,2011
+98,2011-09-07,Office Supplies,Storage,"Perma STOR-ALL Hanging File Box, 13 1/8""W x 12 1/4""D x 10 1/2""H",23.92,4.0,7,9,2011
+104,2011-09-10,Office Supplies,Art,Boston Heavy-Duty Trimline Electric Pencil Sharpeners,144.6,3.0,10,9,2011
+108,2011-09-11,Furniture,Bookcases,"Sauder Mission Library with Doors, Fruitwood Finish",222.666,2.0,11,9,2011
+109,2011-09-11,Office Supplies,Paper,Xerox 1912,94.85,5.0,11,9,2011
+115,2011-10-05,Office Supplies,Paper,Southworth 25% Cotton Premium Laser Paper and Envelopes,39.96,2.0,5,10,2011
+117,2011-10-10,Furniture,Chairs,"Global Deluxe Stacking Chair, Gray",122.352,3.0,10,10,2011
+120,2011-10-11,Furniture,Furnishings,"Eldon Expressions Punched Metal & Wood Desk Accessories, Pewter & Cherry",53.2,5.0,11,10,2011
+121,2011-10-11,Furniture,Furnishings,Luxo Economy Swing Arm Lamp,39.88,2.0,11,10,2011
+126,2011-11-09,Furniture,Furnishings,"Deflect-o DuraMat Lighweight, Studded, Beveled Mat for Low Pile Carpeting",127.95,3.0,9,11,2011
+128,2011-11-10,Office Supplies,Storage,Iris Project Case,31.92,4.0,10,11,2011
+131,2011-11-11,Office Supplies,Paper,Xerox 1979,123.92,4.0,11,11,2011
+133,2011-11-11,Office Supplies,Art,50 Colored Long Pencils,30.48,3.0,11,11,2011
+138,2011-12-04,Office Supplies,Art,Prismacolor Color Pencil Set,39.68,2.0,4,12,2011
+145,2011-12-08,Furniture,Furnishings,"Seth Thomas 14"" Day/Date Wall Clock",85.44,3.0,8,12,2011
+157,2012-01-05,Technology,Phones,OtterBox Defender Series Case - iPhone 5c,88.752,3.0,5,1,2012
+158,2012-01-05,Office Supplies,Supplies,"Acme 10"" Easy Grip Assistive Scissors",35.06,2.0,5,1,2012
+159,2012-01-05,Office Supplies,Storage,Eldon Simplefile Box Office,37.32,3.0,5,1,2012
+168,2012-02-04,Technology,Machines,"Vtech AT&T CL2940 Corded Speakerphone, Black",71.976,3.0,4,2,2012
+171,2012-02-10,Office Supplies,Binders,GBC Poly Designer Binding Covers,53.568,4.0,10,2,2012
+179,2012-03-02,Furniture,Furnishings,Hand-Finished Solid Wood Document Frame,136.92,4.0,2,3,2012
+182,2012-03-05,Office Supplies,Binders,GBC Linen Binding Covers,49.568,2.0,5,3,2012
+183,2012-03-05,Office Supplies,Binders,Ibico Recycled Linen-Style Covers,62.496,2.0,5,3,2012
+186,2012-03-09,Technology,Accessories,"TRENDnet 56K USB 2.0 Phone, Internet and Fax Modem",129.45,5.0,9,3,2012
+187,2012-03-09,Office Supplies,Storage,Sterilite Officeware Hinged File Box,31.44,3.0,9,3,2012
+188,2012-03-09,Furniture,Chairs,Office Star - Ergonomically Designed Knee Chair,129.568,2.0,9,3,2012
+191,2012-03-10,Furniture,Bookcases,"Safco Value Mate Series Steel Bookcases, Baked Enamel Finish on Steel, Gray",120.666,2.0,10,3,2012
+193,2012-03-11,Technology,Accessories,Logitech Trackman Marble Mouse,89.97,3.0,11,3,2012
+194,2012-03-11,Furniture,Furnishings,Coloredge Poster Frame,42.6,3.0,11,3,2012
+197,2012-04-06,Technology,Accessories,Logitech Wireless Anywhere Mouse MX for PC and Mac,119.98,2.0,6,4,2012
+198,2012-04-07,Office Supplies,Binders,Avery Premier Heavy-Duty Binder with Round Locking Rings,22.848,2.0,7,4,2012
+199,2012-04-10,Office Supplies,Storage,"Tenex Personal Project File with Scoop Front Design, Black",26.96,2.0,10,4,2012
+201,2012-04-12,Technology,Phones,Jensen SMPS-640 - speaker phone,110.352,3.0,12,4,2012
+202,2012-04-12,Furniture,Furnishings,"Master Caster Door Stop, Large Brown",36.4,5.0,12,4,2012
+211,2012-05-11,Office Supplies,Storage,Hanging Personal Folder File,62.8,4.0,11,5,2012
+212,2012-05-12,Furniture,Furnishings,"Executive Impressions 14"" Contract Wall Clock",44.46,2.0,12,5,2012
+213,2012-05-12,Technology,Accessories,Memorex Micro Travel Drive 8 GB,39.0,3.0,12,5,2012
+217,2012-06-07,Furniture,Chairs,Novimex Turbo Task Chair,170.352,3.0,7,6,2012
+218,2012-06-09,Technology,Accessories,Memorex Mini Travel Drive 8 GB USB 2.0 Flash Drive,46.32,4.0,9,6,2012
+219,2012-06-12,Technology,Phones,AT&T 1080 Corded phone,219.184,2.0,12,6,2012
+221,2012-06-12,Office Supplies,Paper,"Message Book, Phone, Wirebound Standard Line Memo, 2 3/4"" X 5""",32.75,5.0,12,6,2012
+228,2012-07-12,Furniture,Furnishings,12-1/2 Diameter Round Wall Clock,79.92,4.0,12,7,2012
+234,2012-08-09,Office Supplies,Paper,Xerox 1928,26.4,5.0,9,8,2012
+235,2012-08-10,Furniture,Furnishings,"Deflect-o SuperTray Unbreakable Stackable Tray, Letter, Black",145.9,5.0,10,8,2012
+237,2012-08-11,Technology,Accessories,Microsoft Arc Touch Mouse,119.9,2.0,11,8,2012
+239,2012-08-12,Office Supplies,Storage,"Stur-D-Stor Shelving, Vertical 5-Shelf: 72""H x 36""W x 18 1/2""D",221.96,2.0,12,8,2012
+241,2012-09-02,Furniture,Chairs,"Global Deluxe Stacking Chair, Gray",203.92,5.0,2,9,2012
+245,2012-10-07,Office Supplies,Binders,Large Capacity Hanging Post Binders,39.92,2.0,7,10,2012
+247,2012-10-09,Office Supplies,Supplies,Martin-Yale Premier Letter Opener,51.52,4.0,9,10,2012
+249,2012-10-10,Office Supplies,Labels,Avery 503,31.05,3.0,10,10,2012
+251,2012-10-11,Technology,Accessories,Microsoft Sculpt Comfort Mouse,79.9,2.0,11,10,2012
+252,2012-10-12,Office Supplies,Art,"Boston Electric Pencil Sharpener, Model 1818, Charcoal Black",56.3,2.0,12,10,2012
+255,2012-11-04,Office Supplies,Paper,Staples,52.76,2.0,4,11,2012
+259,2012-11-12,Office Supplies,Binders,GBC Recycled Grain Textured Covers,110.528,4.0,12,11,2012
+266,2012-12-12,Furniture,Furnishings,Eldon Cleatmat Chair Mats for Medium Pile Carpets,166.5,3.0,12,12,2012
+268,2012-12-12,Office Supplies,Paper,"Black Print Carbonless Snap-Off Rapid Letter, 8 1/2"" x 7""",36.44,4.0,12,12,2012
+270,2012-12-12,Office Supplies,Binders,Recycled Premium Regency Composition Covers,24.448,2.0,12,12,2012
+273,2013-01-02,Office Supplies,Paper,Xerox 1883,105.52,4.0,2,1,2013
+278,2013-02-08,Office Supplies,Appliances,Belkin F5C206VTEL 6 Outlet Surge,45.96,2.0,8,2,2013
+279,2013-02-09,Office Supplies,Envelopes,"White Business Envelopes with Contemporary Seam, Recycled White Business Envelopes",21.88,2.0,9,2,2013
+281,2013-02-10,Furniture,Chairs,"Global Value Mid-Back Manager's Chair, Gray",194.848,4.0,10,2,2013
+283,2013-02-12,Furniture,Furnishings,Tenex Chairmats For Use With Carpeted Floors,31.96,2.0,12,2,2013
+287,2013-02-12,Office Supplies,Envelopes,"#10- 4 1/8"" x 9 1/2"" Security-Tint Envelopes",22.92,3.0,12,2,2013
+288,2013-03-01,Office Supplies,Storage,Recycled Steel Personal File for Hanging File Folders,114.46,2.0,1,3,2013
+291,2013-03-08,Furniture,Tables,"Barricks Non-Folding Utility Table with Steel Legs, Laminate Tops",136.464,2.0,8,3,2013
+296,2013-03-09,Office Supplies,Storage,"Tenex File Box, Personal Filing Tote with Lid, Black",46.53,3.0,9,3,2013
+298,2013-03-09,Office Supplies,Storage,Akro Stacking Bins,23.67,3.0,9,3,2013
+300,2013-03-12,Office Supplies,Binders,Satellite Sectional Post Binders,104.184,3.0,12,3,2013
+301,2013-03-12,Office Supplies,Appliances,"Holmes Cool Mist Humidifier for the Whole House with 8-Gallon Output per Day, Extended Life Filter",59.7,3.0,12,3,2013
+303,2013-03-12,Office Supplies,Binders,GBC VeloBind Cover Sets,24.704,2.0,12,3,2013
+304,2013-03-12,Office Supplies,Storage,X-Rack File for Hanging Folders,33.87,3.0,12,3,2013
+305,2013-03-12,Office Supplies,Paper,Xerox 192,25.92,4.0,12,3,2013
+307,2013-04-02,Office Supplies,Storage,Safco Commercial Shelving,93.02,2.0,2,4,2013
+308,2013-04-03,Furniture,Furnishings,"Executive Impressions 10"" Spectator Wall Clock",35.28,3.0,3,4,2013
+309,2013-04-03,Office Supplies,Supplies,"Elite 5"" Scissors",25.35,3.0,3,4,2013
+310,2013-04-06,Furniture,Tables,Hon 61000 Series Interactive Training Tables,71.088,2.0,6,4,2013
+314,2013-04-10,Office Supplies,Paper,Xerox 1891,97.82,2.0,10,4,2013
+318,2013-04-11,Furniture,Chairs,Global Deluxe High-Back Office Chair in Storm,217.584,2.0,11,4,2013
+319,2013-04-11,Technology,Accessories,Kensington K72356US Mouse-in-a-Box USB Desktop Mouse,82.95,5.0,11,4,2013
+322,2013-04-11,Office Supplies,Paper,Xerox 1892,116.28,3.0,11,4,2013
+324,2013-04-11,Office Supplies,Appliances,Holmes 99% HEPA Air Purifier,43.32,2.0,11,4,2013
+331,2013-04-12,Furniture,Bookcases,O'Sullivan Living Dimensions 2-Shelf Bookcases,205.666,2.0,12,4,2013
+333,2013-04-12,Office Supplies,Storage,Acco Perma 4000 Stacking Storage Drawers,48.72,3.0,12,4,2013
+336,2013-05-02,Technology,Phones,Anker Astro 15000mAh USB Portable Charger,159.968,4.0,2,5,2013
+337,2013-05-02,Office Supplies,Storage,"Fellowes Mobile File Cart, Black",186.54,3.0,2,5,2013
+341,2013-05-07,Office Supplies,Storage,Eldon Shelf Savers Cubes and Bins,27.92,4.0,7,5,2013
+342,2013-05-07,Office Supplies,Envelopes,"Inter-Office Recycled Envelopes, Brown Kraft, Button-String,10"" x 13"" , 100/Box",43.96,2.0,7,5,2013
+343,2013-05-07,Furniture,Furnishings,"Master Caster Door Stop, Brown",25.4,5.0,7,5,2013
+345,2013-05-08,Office Supplies,Binders,Wilson Jones Leather-Like Binders with DublLock Round Rings,20.952,3.0,8,5,2013
+348,2013-05-09,Furniture,Furnishings,"6"" Cubicle Wall Clock, Black",24.27,3.0,9,5,2013
+349,2013-05-11,Office Supplies,Art,Boston Heavy-Duty Trimline Electric Pencil Sharpeners,192.8,4.0,11,5,2013
+358,2013-06-05,Furniture,Tables,Hon 61000 Series Interactive Training Tables,71.088,2.0,5,6,2013
+361,2013-06-06,Office Supplies,Appliances,Acco 6 Outlet Guardian Premium Surge Suppressor,58.24,4.0,6,6,2013
+364,2013-06-09,Office Supplies,Paper,14-7/8 x 11 Blue Bar Computer Printout Paper,96.08,2.0,9,6,2013
+367,2013-06-11,Technology,Accessories,KeyTronic E03601U1 - Keyboard - Beige,72.0,4.0,11,6,2013
+368,2013-06-11,Furniture,Chairs,Harbour Creations 67200 Series Stacking Chairs,113.888,2.0,11,6,2013
+369,2013-06-11,Office Supplies,Binders,GBC Twin Loop Wire Binding Elements,53.248,2.0,11,6,2013
+370,2013-06-11,Office Supplies,Envelopes,"Strathmore #10 Envelopes, Ultimate White",158.13,3.0,11,6,2013
+371,2013-06-11,Office Supplies,Binders,Cardinal Holdit Data Disk Pockets,29.12,5.0,11,6,2013
+374,2013-07-05,Furniture,Furnishings,"Executive Impressions 8-1/2"" Career Panel/Partition Cubicle Clock",41.6,4.0,5,7,2013
+377,2013-07-06,Office Supplies,Paper,Xerox Blank Computer Paper,99.9,5.0,6,7,2013
+379,2013-07-06,Technology,Accessories,Rosewill 107 Normal Keys USB Wired Standard Keyboard,26.96,2.0,6,7,2013
+380,2013-07-08,Technology,Phones,Panasonic KX-TG6844B Expandable Digital Cordless Telephone,211.168,4.0,8,7,2013
+382,2013-07-11,Furniture,Chairs,"Global Task Chair, Black",81.424,2.0,11,7,2013
+383,2013-07-11,Office Supplies,Storage,Eldon Portable Mobile Manager,84.84,3.0,11,7,2013
+397,2013-08-07,Furniture,Furnishings,"Howard Miller 11-1/2"" Diameter Grantwood Wall Clock",215.65,5.0,7,8,2013
+399,2013-08-10,Office Supplies,Binders,GBC Recycled VeloBinder Covers,27.264,2.0,10,8,2013
+402,2013-08-11,Office Supplies,Binders,Ibico Plastic and Wire Spiral Binding Combs,26.976,4.0,11,8,2013
+403,2013-08-11,Office Supplies,Binders,GBC VeloBinder Manual Binding System,57.584,2.0,11,8,2013
+404,2013-08-11,Office Supplies,Binders,Fellowes Binding Cases,37.44,4.0,11,8,2013
+411,2013-09-02,Technology,Accessories,Logitech 910-002974 M325 Wireless Mouse for Web Scrolling,89.97,3.0,2,9,2013
+412,2013-09-02,Technology,Accessories,Maxell 4.7GB DVD+RW 3/Pack,31.86,2.0,2,9,2013
+413,2013-09-04,Office Supplies,Storage,Fellowes Neat Ideas Storage Cubes,64.96,2.0,4,9,2013
+414,2013-09-04,Office Supplies,Paper,Xerox 1923,20.04,3.0,4,9,2013
+415,2013-09-04,Furniture,Furnishings,"C-Line Magnetic Cubicle Keepers, Clear Polypropylene",24.7,5.0,4,9,2013
+422,2013-09-09,Office Supplies,Binders,Premium Transparent Presentation Covers by GBC,67.136,4.0,9,9,2013
+423,2013-09-09,Office Supplies,Binders,"Square Ring Data Binders, Rigid 75 Pt. Covers, 11"" x 14-7/8""",33.024,2.0,9,9,2013
+427,2013-09-10,Office Supplies,Paper,Xerox 1925,61.96,2.0,10,9,2013
+430,2013-09-12,Office Supplies,Storage,"SimpliFile Personal File, Black Granite, 15w x 6-15/16d x 11-1/4h",34.05,3.0,12,9,2013
+434,2013-10-05,Office Supplies,Paper,"TOPS Money Receipt Book, Consecutively Numbered in Red,",32.04,4.0,5,10,2013
+435,2013-10-06,Furniture,Chairs,"Global Deluxe Stacking Chair, Gray",122.352,3.0,6,10,2013
+436,2013-10-06,Technology,Phones,Avaya 4621SW VoIP phone,177.48,3.0,6,10,2013
+437,2013-10-09,Office Supplies,Binders,VariCap6 Expandable Binder,55.36,4.0,9,10,2013
+443,2013-11-03,Technology,Accessories,Kingston Digital DataTraveler 16GB USB 2.0,26.85,3.0,3,11,2013
+446,2013-11-04,Office Supplies,Appliances,3M Replacement Filter for Office Air Cleaner for 20' x 33' Room,113.76,3.0,4,11,2013
+447,2013-11-04,Office Supplies,Binders,"GBC Prepunched Paper, 19-Hole, for Binding Systems, 24-lb",48.032,4.0,4,11,2013
+449,2013-11-04,Office Supplies,Binders,"Wilson Jones Clip & Carry Folder Binder Tool for Ring Binders, Clear",23.2,5.0,4,11,2013
+451,2013-11-06,Office Supplies,Paper,Xerox 226,32.4,5.0,6,11,2013
+452,2013-11-06,Office Supplies,Labels,Avery 473,20.7,2.0,6,11,2013
+457,2013-11-11,Office Supplies,Appliances,Belkin F9S820V06 8 Outlet Surge,129.92,4.0,11,11,2013
+458,2013-11-11,Office Supplies,Paper,Embossed Ink Jet Note Cards,67.71,3.0,11,11,2013
+459,2013-11-11,Office Supplies,Paper,Xerox 1933,61.4,5.0,11,11,2013
+460,2013-11-11,Office Supplies,Binders,Binding Machine Supplies,70.008,3.0,11,11,2013
+462,2013-11-11,Office Supplies,Paper,Xerox 1996,32.4,5.0,11,11,2013
+473,2013-12-09,Office Supplies,Binders,GBC Standard Therm-A-Bind Covers,39.872,2.0,9,12,2013
+476,2013-12-11,Furniture,Furnishings,Magnifier Swing Arm Lamp,41.96,2.0,11,12,2013
+481,2013-12-12,Office Supplies,Binders,Ibico Laser Imprintable Binding System Covers,209.6,5.0,12,12,2013
+482,2013-12-12,Technology,Accessories,Microsoft Natural Ergonomic Keyboard 4000,119.96,4.0,12,12,2013
+484,2013-12-12,Office Supplies,Appliances,Fellowes 8 Outlet Superior Workstation Surge Protector,83.42,2.0,12,12,2013
+485,2013-12-12,Office Supplies,Storage,Rogers Profile Extra Capacity Storage Tub,50.22,3.0,12,12,2013
+486,2013-12-12,Office Supplies,Binders,Recycled Easel Ring Binders,35.808,3.0,12,12,2013
+488,2013-12-12,Office Supplies,Art,Boston 16765 Mini Stand Up Battery Pencil Sharpener,23.32,2.0,12,12,2013
+491,2014-01-01,Office Supplies,Binders,"GBC Pre-Punched Binding Paper, Plastic, White, 8-1/2"" x 11""",38.376,3.0,1,1,2014
+492,2014-01-04,Office Supplies,Supplies,Acme Tagit Stainless Steel Antibacterial Scissors,29.7,3.0,4,1,2014
+493,2014-01-05,Furniture,Furnishings,"Seth Thomas 16"" Steel Case Clock",64.96,2.0,5,1,2014
+494,2014-01-05,Office Supplies,Paper,Xerox 1919,163.96,4.0,5,1,2014
+495,2014-01-05,Office Supplies,Envelopes,"#10- 4 1/8"" x 9 1/2"" Security-Tint Envelopes",30.56,4.0,5,1,2014
+496,2014-01-05,Office Supplies,Binders,Fellowes Black Plastic Comb Bindings,23.24,5.0,5,1,2014
+499,2014-01-07,Office Supplies,Paper,Xerox 1919,204.95,5.0,7,1,2014
+500,2014-01-08,Office Supplies,Storage,Eldon Portable Mobile Manager,56.56,2.0,8,1,2014
+503,2014-01-09,Office Supplies,Storage,Space Solutions Commercial Steel Shelving,193.95,3.0,9,1,2014
+505,2014-01-10,Technology,Accessories,Razer Kraken PRO Over Ear PC and Music Headset,159.98,2.0,10,1,2014
+506,2014-01-12,Furniture,Furnishings,Contemporary Borderless Frame,25.83,3.0,12,1,2014
+512,2014-02-08,Office Supplies,Storage,"Fellowes Mobile File Cart, Black",186.54,3.0,8,2,2014
+513,2014-02-08,Office Supplies,Binders,GBC Prestige Therm-A-Bind Covers,54.896,2.0,8,2,2014
+516,2014-02-10,Technology,Accessories,Sony 32GB Class 10 Micro SDHC R40 Memory Card,104.75,5.0,10,2,2014
+517,2014-02-10,Furniture,Chairs,"Metal Folding Chairs, Beige, 4/Carton",108.608,4.0,10,2,2014
+523,2014-03-02,Furniture,Furnishings,Eldon Antistatic Chair Mats for Low to Medium Pile Carpets,210.58,2.0,2,3,2014
+525,2014-03-02,Office Supplies,Storage,"Multi-Use Personal File Cart and Caster Set, Three Stacking Bins",139.04,4.0,2,3,2014
+526,2014-03-02,Furniture,Furnishings,"Howard Miller 11-1/2"" Diameter Grantwood Wall Clock",86.26,2.0,2,3,2014
+527,2014-03-02,Office Supplies,Appliances,Harmony HEPA Quiet Air Purifiers,46.8,4.0,2,3,2014
+528,2014-03-02,Office Supplies,Binders,GBC Durable Plastic Covers,30.96,2.0,2,3,2014
+530,2014-03-03,Technology,Phones,Panasonic KX TS3282B Corded phone,196.776,3.0,3,3,2014
+531,2014-03-03,Office Supplies,Binders,Catalog Binders with Expanding Posts,107.648,2.0,3,3,2014
+532,2014-03-04,Furniture,Furnishings,Westinghouse Clip-On Gooseneck Lamps,25.11,3.0,4,3,2014
+533,2014-03-05,Technology,Accessories,Logitech MX Performance Wireless Mouse,159.56,4.0,5,3,2014
+534,2014-03-05,Office Supplies,Art,Newell 34,59.52,3.0,5,3,2014
+535,2014-03-05,Office Supplies,Paper,"Adams Phone Message Book, 200 Message Capacity, 8 1/16” x 11”",34.4,5.0,5,3,2014
+539,2014-03-09,Technology,Phones,Ooma Telo VoIP Home Phone System,201.584,2.0,9,3,2014
+540,2014-03-09,Office Supplies,Binders,"GBC Velobind Prepunched Cover Sets, Regency Series",147.92,5.0,9,3,2014
+541,2014-03-09,Office Supplies,Labels,Avery 505,74.0,5.0,9,3,2014
+542,2014-03-09,Office Supplies,Appliances,"Acco Six-Outlet Power Strip, 4' Cord Length",43.1,5.0,9,3,2014
+548,2014-03-10,Office Supplies,Binders,"Performers Binder/Pad Holder, Black",112.12,5.0,10,3,2014
+553,2014-03-11,Office Supplies,Appliances,Fellowes 8 Outlet Superior Workstation Surge Protector w/o Phone/Fax/Modem Protection,168.1,5.0,11,3,2014
+554,2014-03-11,Furniture,Furnishings,Document Clip Frames,25.02,3.0,11,3,2014
+559,2014-03-12,Office Supplies,Paper,Xerox 1940,109.92,2.0,12,3,2014
+560,2014-03-12,Office Supplies,Art,Panasonic KP-380BK Classic Electric Pencil Sharpener,179.9,5.0,12,3,2014
+561,2014-03-12,Office Supplies,Appliances,Fellowes Advanced Computer Series Surge Protectors,79.47,3.0,12,3,2014
+563,2014-03-12,Office Supplies,Binders,Satellite Sectional Post Binders,69.456,2.0,12,3,2014
+573,2014-04-03,Furniture,Chairs,Novimex Turbo Task Chair,170.352,3.0,3,4,2014
+575,2014-04-05,Office Supplies,Storage,"Multi-Use Personal File Cart and Caster Set, Three Stacking Bins",69.52,2.0,5,4,2014
+576,2014-04-05,Office Supplies,Paper,Xerox 2,25.92,4.0,5,4,2014
+578,2014-04-06,Technology,Accessories,Kingston Digital DataTraveler 16GB USB 2.0,44.75,5.0,6,4,2014
+581,2014-04-07,Furniture,Furnishings,"Howard Miller 11-1/2"" Diameter Brentwood Wall Clock",129.39,3.0,7,4,2014
+582,2014-04-07,Office Supplies,Storage,Rogers Deluxe File Chest,87.92,4.0,7,4,2014
+583,2014-04-08,Furniture,Furnishings,"Deflect-o EconoMat Studded, No Bevel Mat for Low Pile Carpeting",123.96,3.0,8,4,2014
+584,2014-04-08,Office Supplies,Storage,Fellowes Bases and Tops For Staxonsteel/High-Stak Systems,99.87,3.0,8,4,2014
+585,2014-04-08,Office Supplies,Labels,Avery 473,51.75,5.0,8,4,2014
+588,2014-04-09,Office Supplies,Binders,"Square Ring Data Binders, Rigid 75 Pt. Covers, 11"" x 14-7/8""",82.56,5.0,9,4,2014
+590,2014-04-10,Furniture,Tables,"Lesro Sheffield Collection Coffee Table, End Table, Center Table, Corner Table",171.288,3.0,10,4,2014
+593,2014-04-11,Technology,Accessories,Microsoft Sculpt Comfort Mouse,199.75,5.0,11,4,2014
+595,2014-04-12,Office Supplies,Paper,Xerox 1888,166.44,3.0,12,4,2014
+599,2014-05-05,Technology,Phones,Motorola L804,183.96,5.0,5,5,2014
+605,2014-05-09,Office Supplies,Storage,"Trav-L-File Heavy-Duty Shuttle II, Black",217.85,5.0,9,5,2014
+607,2014-05-09,Technology,Phones,invisibleSHIELD by ZAGG Smudge-Free Screen Protector,43.176,3.0,9,5,2014
+608,2014-05-09,Office Supplies,Storage,"Rogers Jumbo File, Granite",54.32,4.0,9,5,2014
+616,2014-06-05,Office Supplies,Envelopes,"Peel & Seel Recycled Catalog Envelopes, Brown",23.16,2.0,5,6,2014
+618,2014-06-10,Furniture,Tables,KI Adjustable-Height Table,206.352,3.0,10,6,2014
+619,2014-06-10,Office Supplies,Paper,Xerox 1951,61.96,2.0,10,6,2014
+620,2014-06-10,Office Supplies,Binders,"Avery Framed View Binder, EZD Ring (Locking), Navy, 1 1/2""",39.92,5.0,10,6,2014
+621,2014-06-10,Furniture,Furnishings,DAX Clear Channel Poster Frame,72.9,5.0,10,6,2014
+622,2014-06-10,Office Supplies,Binders,Avery Hole Reinforcements,19.936,4.0,10,6,2014
+627,2014-06-12,Office Supplies,Paper,Xerox 1960,92.94,3.0,12,6,2014
+628,2014-07-02,Office Supplies,Paper,Xerox 1947,29.9,5.0,2,7,2014
+630,2014-07-03,Technology,Phones,Digium D40 VoIP phone,206.384,2.0,3,7,2014
+631,2014-07-03,Office Supplies,Storage,"File Shuttle II and Handi-File, Black",67.78,2.0,3,7,2014
+635,2014-07-05,Office Supplies,Appliances,Eureka The Boss Cordless Rechargeable Stick Vac,152.94,3.0,5,7,2014
+636,2014-07-06,Office Supplies,Storage,Sterilite Show Offs Storage Containers,26.4,5.0,6,7,2014
+638,2014-07-07,Furniture,Chairs,"Global Task Chair, Black",122.136,3.0,7,7,2014
+639,2014-07-11,Office Supplies,Paper,Xerox 191,59.94,3.0,11,7,2014
+640,2014-07-11,Office Supplies,Labels,Avery 503,41.4,4.0,11,7,2014
+641,2014-07-11,Office Supplies,Paper,Staples,45.36,4.0,11,7,2014
+642,2014-07-11,Office Supplies,Paper,Astroparche Fine Business Paper,26.4,5.0,11,7,2014
+649,2014-08-01,Office Supplies,Storage,Tennsco Commercial Shelving,61.02,3.0,1,8,2014
+659,2014-08-08,Technology,Phones,GE DSL Phone Line Filter,159.96,5.0,8,8,2014
+660,2014-08-08,Technology,Accessories,Sony Micro Vault Click 4 GB USB 2.0 Flash Drive,55.76,4.0,8,8,2014
+662,2014-08-08,Office Supplies,Binders,"Mead 1st Gear 2"" Zipper Binder, Asst. Colors",31.128,3.0,8,8,2014
+663,2014-08-08,Office Supplies,Paper,Xerox 1881,24.56,2.0,8,8,2014
+666,2014-08-09,Furniture,Chairs,Global Low Back Tilter Chair,161.568,2.0,9,8,2014
+667,2014-08-09,Furniture,Furnishings,Tenex Chairmats For Use With Carpeted Floors,47.94,3.0,9,8,2014
+668,2014-08-09,Furniture,Furnishings,"C-Line Magnetic Cubicle Keepers, Clear Polypropylene",19.76,4.0,9,8,2014
+675,2014-08-11,Technology,Accessories,Anker Ultra-Slim Mini Bluetooth 3.0 Wireless Keyboard,59.97,3.0,11,8,2014
+676,2014-08-11,Office Supplies,Binders,Avery Self-Adhesive Photo Pockets for Polaroid Photos,21.792,4.0,11,8,2014
+679,2014-09-03,Office Supplies,Binders,"Green Canvas Binder for 8-1/2"" x 14"" Sheets",171.2,5.0,3,9,2014
+681,2014-09-04,Office Supplies,Paper,Xerox 1942,195.76,4.0,4,9,2014
+684,2014-09-05,Office Supplies,Appliances,Fellowes Mighty 8 Compact Surge Protector,81.08,4.0,5,9,2014
+687,2014-09-07,Furniture,Furnishings,"Deflect-o SuperTray Unbreakable Stackable Tray, Letter, Black",145.9,5.0,7,9,2014
+691,2014-09-10,Technology,Accessories,KeyTronic E03601U1 - Keyboard - Beige,36.0,2.0,10,9,2014
+692,2014-09-10,Office Supplies,Storage,Tennsco Commercial Shelving,40.68,2.0,10,9,2014
+697,2014-09-12,Furniture,Furnishings,"Tenex Traditional Chairmats for Hard Floors, Average Lip, 36"" x 48""",128.9,2.0,12,9,2014
+699,2014-09-12,Office Supplies,Binders,Vinyl Sectional Post Binders,90.48,3.0,12,9,2014
+700,2014-09-12,Office Supplies,Storage,Akro-Mils 12-Gallon Tote,29.79,3.0,12,9,2014
+701,2014-09-12,Technology,Accessories,Sony 64GB Class 10 Micro SDHC R40 Memory Card,179.95,5.0,12,9,2014
+702,2014-09-12,Furniture,Chairs,Novimex High-Tech Fabric Mesh Task Chair,113.568,2.0,12,9,2014
+706,2014-09-12,Office Supplies,Paper,Standard Line “While You Were Out” Hardbound Telephone Message Book,87.92,4.0,12,9,2014
+707,2014-09-12,Office Supplies,Paper,"Wirebound Message Book, 4 per Page",27.15,5.0,12,9,2014
+711,2014-10-02,Furniture,Furnishings,"Master Big Foot Doorstop, Beige",21.12,4.0,2,10,2014
+713,2014-10-03,Technology,Accessories,Logitech Wireless Headset h800,199.98,2.0,3,10,2014
+714,2014-10-03,Office Supplies,Binders,DXL Angle-View Binders with Locking Rings by Samsill,30.84,5.0,3,10,2014
+716,2014-10-09,Office Supplies,Storage,Fellowes Bases and Tops For Staxonsteel/High-Stak Systems,99.87,3.0,9,10,2014
+717,2014-10-09,Technology,Accessories,Microsoft Wireless Mobile Mouse 4000,159.96,4.0,9,10,2014
+720,2014-10-10,Office Supplies,Paper,"Wirebound Message Books, 2 7/8"" x 5"", 3 Forms per Page",35.2,5.0,10,10,2014
+721,2014-10-11,Furniture,Chairs,"Global Leather Task Chair, Black",215.976,3.0,11,10,2014
+724,2014-10-11,Office Supplies,Storage,"Safco Wire Cube Shelving System, For Use as 4 or 5 14"" Cubes, Black",63.56,2.0,11,10,2014
+728,2014-10-12,Furniture,Bookcases,O'Sullivan 3-Shelf Heavy-Duty Bookcases,148.257,3.0,12,10,2014
+731,2014-11-02,Furniture,Bookcases,"Bush Andora Bookcase, Maple/Graphite Gray Finish",203.983,2.0,2,11,2014
+732,2014-11-03,Technology,Accessories,Maxell LTO Ultrium - 800 GB,111.96,4.0,3,11,2014
+734,2014-11-06,Office Supplies,Labels,Alphabetical Labels for Top Tab Filing,29.6,2.0,6,11,2014
+743,2014-11-12,Technology,Phones,Jackery Bar Premium Fast-charging Portable Charger,95.84,4.0,12,11,2014
+744,2014-11-12,Office Supplies,Binders,"Wilson Jones Ledger-Size, Piano-Hinge Binder, 2"", Blue",65.568,2.0,12,11,2014
+745,2014-11-12,Office Supplies,Binders,Avery Hole Reinforcements,19.936,4.0,12,11,2014
+748,2014-12-04,Technology,Accessories,SanDisk Ultra 64 GB MicroSDHC Class 10 Memory Card,199.95,5.0,4,12,2014
+750,2014-12-06,Office Supplies,Paper,"White Dual Perf Computer Printout Paper, 2700 Sheets, 1 Part, Heavyweight, 20 lbs., 14 7/8 x 11",122.97,3.0,6,12,2014
+751,2014-12-06,Office Supplies,Appliances,Kensington 6 Outlet Guardian Standard Surge Protector,61.44,3.0,6,12,2014
+753,2014-12-07,Office Supplies,Appliances,Fellowes 8 Outlet Superior Workstation Surge Protector w/o Phone/Fax/Modem Protection,168.1,5.0,7,12,2014
+755,2014-12-07,Office Supplies,Binders,"Acco Four Pocket Poly Ring Binder with Label Holder, Smoke, 1""",29.8,5.0,7,12,2014
+760,2014-12-09,Office Supplies,Envelopes,#10 Self-Seal White Envelopes,22.18,2.0,9,12,2014
+761,2014-12-09,Furniture,Furnishings,"6"" Cubicle Wall Clock, Black",32.36,4.0,9,12,2014
+764,2014-12-11,Office Supplies,Binders,Ibico Plastic Spiral Binding Combs,121.6,5.0,11,12,2014
+765,2014-12-11,Furniture,Furnishings,Dax Clear Box Frame,34.92,4.0,11,12,2014
+769,2012-01-13,Furniture,Furnishings,"Floodlight Indoor Halogen Bulbs, 1 Bulb per Pack, 60 Watts",77.6,4.0,13,1,2012
+770,2012-01-13,Office Supplies,Binders,Binding Machine Supplies,70.008,3.0,13,1,2012
+772,2011-02-13,Furniture,Chairs,"Global Geo Office Task Chair, Gray",129.568,2.0,13,2,2011
+773,2013-02-13,Office Supplies,Paper,Tops Green Bar Computer Printout Paper,146.82,3.0,13,2,2013
+778,2013-03-13,Office Supplies,Appliances,Euro-Pro Shark Turbo Vacuum,154.9,5.0,13,3,2013
+779,2013-03-13,Office Supplies,Envelopes,Security-Tint Envelopes,30.56,4.0,13,3,2013
+780,2013-03-13,Office Supplies,Paper,Hammermill Color Copier Paper (28Lb. and 96 Bright),19.98,2.0,13,3,2013
+786,2012-04-13,Technology,Accessories,Plantronics Audio 478 Stereo USB Headset,199.96,4.0,13,4,2012
+787,2012-04-13,Office Supplies,Appliances,3M Replacement Filter for Office Air Cleaner for 20' x 33' Room,75.84,2.0,13,4,2012
+788,2012-04-13,Furniture,Furnishings,Flat Face Poster Frame,37.68,2.0,13,4,2012
+790,2013-04-13,Office Supplies,Binders,Aluminum Screw Posts,36.624,3.0,13,4,2013
+791,2013-04-13,Furniture,Chairs,"Global Geo Office Task Chair, Gray",194.352,3.0,13,4,2013
+795,2011-05-13,Technology,Accessories,Plantronics Audio 478 Stereo USB Headset,149.97,3.0,13,5,2011
+804,2012-06-13,Office Supplies,Binders,Aluminum Screw Posts,36.624,3.0,13,6,2012
+810,2012-08-13,Furniture,Furnishings,Ultra Door Pull Handle,31.56,3.0,13,8,2012
+811,2012-08-13,Office Supplies,Art,50 Colored Long Pencils,50.8,5.0,13,8,2012
+813,2014-08-13,Furniture,Furnishings,DAX Wood Document Frame,54.92,4.0,13,8,2014
+815,2012-09-13,Office Supplies,Paper,Xerox 1915,209.7,2.0,13,9,2012
+817,2012-09-13,Furniture,Furnishings,Eldon Econocleat Chair Mats for Low Pile Carpets,207.35,5.0,13,9,2012
+818,2012-09-13,Furniture,Furnishings,Tensor Computer Mounted Lamp,44.67,3.0,13,9,2012
+819,2012-09-13,Office Supplies,Binders,"Acco Data Flex Cable Posts For Top & Bottom Load Binders, 6"" Capacity",25.032,3.0,13,9,2012
+820,2014-09-13,Office Supplies,Paper,"Eaton Premium Continuous-Feed Paper, 25% Cotton, Letter Size, White, 1000 Shts/Box",166.44,3.0,13,9,2014
+823,2014-10-13,Office Supplies,Binders,Canvas Sectional Post Binders,101.84,5.0,13,10,2014
+830,2013-11-13,Technology,Phones,Panasonic KX TS3282W Corded phone,203.976,3.0,13,11,2013
+837,2012-12-13,Office Supplies,Appliances,Fellowes 8 Outlet Superior Workstation Surge Protector w/o Phone/Fax/Modem Protection,134.48,4.0,13,12,2012
+839,2012-12-13,Office Supplies,Binders,"Angle-D Binders with Locking Rings, Label Holders",29.2,5.0,13,12,2012
+843,2013-12-13,Office Supplies,Appliances,Belkin F9H710-06 7 Outlet SurgeMaster Surge Protector,56.52,3.0,13,12,2013
+846,2011-01-14,Office Supplies,Art,4009 Highlighters by Sanford,19.9,5.0,14,1,2011
+852,2013-03-14,Furniture,Furnishings,"Westinghouse Mesh Shade Clip-On Gooseneck Lamp, Black",28.28,2.0,14,3,2013
+859,2012-05-14,Furniture,Chairs,Novimex Fabric Task Chair,97.568,2.0,14,5,2012
+860,2012-05-14,Furniture,Furnishings,Dana Halogen Swing-Arm Architect Lamp,122.91,3.0,14,5,2012
+862,2014-08-14,Office Supplies,Art,Newell 345,59.52,3.0,14,8,2014
+864,2014-08-14,Office Supplies,Storage,Sterilite Officeware Hinged File Box,31.44,3.0,14,8,2014
+865,2014-08-14,Office Supplies,Supplies,Staples,31.92,4.0,14,8,2014
+866,2014-08-14,Office Supplies,Binders,"GBC Prepunched Paper, 19-Hole, for Binding Systems, 24-lb",36.024,3.0,14,8,2014
+867,2012-09-14,Furniture,Tables,KI Conference Tables,170.136,3.0,14,9,2012
+868,2013-10-14,Office Supplies,Binders,GBC Wire Binding Strips,76.176,3.0,14,10,2013
+872,2013-10-14,Office Supplies,Paper,Xerox 195,20.04,3.0,14,10,2013
+877,2014-10-14,Technology,Phones,Anker Astro Mini 3000mAh Ultra-Compact Portable Charger,31.984,2.0,14,10,2014
+878,2014-11-14,Technology,Accessories,Kensington K72356US Mouse-in-a-Box USB Desktop Mouse,82.95,5.0,14,11,2014
+879,2014-11-14,Technology,Phones,Samsung Replacement EH64AVFWE Premium Headset,22.0,5.0,14,11,2014
+881,2012-12-14,Office Supplies,Binders,Ibico Recycled Grain-Textured Covers,55.264,2.0,14,12,2012
+882,2012-12-14,Technology,Accessories,Micro Innovations USB RF Wireless Keyboard with Mouse,50.0,2.0,14,12,2012
+883,2012-12-14,Furniture,Furnishings,Staples,29.22,3.0,14,12,2012
+884,2012-12-14,Office Supplies,Binders,"GBC Laser Imprintable Binding System Covers, Desert Sand",34.248,3.0,14,12,2012
+895,2014-01-15,Office Supplies,Paper,Xerox 19,154.9,5.0,15,1,2014
+897,2012-02-15,Office Supplies,Binders,"Acco Data Flex Cable Posts For Top & Bottom Load Binders, 6"" Capacity",41.72,5.0,15,2,2012
+902,2011-04-15,Furniture,Furnishings,"Howard Miller 13"" Diameter Goldtone Round Wall Clock",187.76,4.0,15,4,2011
+903,2011-04-15,Office Supplies,Appliances,Belkin F9G930V10-GRY 9 Outlet Surge,106.96,2.0,15,4,2011
+915,2013-07-15,Technology,Phones,Panasonic Kx-TS550,110.376,3.0,15,7,2013
+916,2013-07-15,Furniture,Furnishings,Deflect-O Glasstique Clear Desk Accessories,30.8,4.0,15,7,2013
+919,2014-07-15,Technology,Accessories,Sony Micro Vault Click 8 GB USB 2.0 Flash Drive,140.97,3.0,15,7,2014
+920,2014-07-15,Office Supplies,Art,"BOSTON Model 1800 Electric Pencil Sharpeners, Putty/Woodgrain",71.92,4.0,15,7,2014
+924,2011-08-15,Office Supplies,Appliances,Tripp Lite TLP810NET Broadband Surge for Modem/Fax,152.91,3.0,15,8,2011
+925,2011-08-15,Furniture,Chairs,Novimex Fabric Task Chair,195.136,4.0,15,8,2011
+926,2011-08-15,Office Supplies,Paper,Xerox 1925,92.94,3.0,15,8,2011
+927,2011-08-15,Office Supplies,Binders,GBC Durable Plastic Covers,46.44,3.0,15,8,2011
+931,2012-08-15,Office Supplies,Storage,Mobile Personal File Cube,70.26,3.0,15,8,2012
+939,2014-10-15,Technology,Accessories,"Verbatim 25 GB 6x Blu-ray Single Layer Recordable Disc, 10/Pack",46.36,4.0,15,10,2014
+941,2011-11-15,Office Supplies,Supplies,Acme Box Cutter Scissors,20.46,2.0,15,11,2011
+949,2013-12-15,Furniture,Chairs,"Global Task Chair, Black",81.424,2.0,15,12,2013
+951,2014-12-15,Office Supplies,Envelopes,"#10- 4 1/8"" x 9 1/2"" Recycled Envelopes",43.7,5.0,15,12,2014
+953,2014-12-15,Furniture,Furnishings,"Eldon 400 Class Desk Accessories, Black Carbon",26.25,3.0,15,12,2014
+954,2013-01-16,Technology,Accessories,Imation 8GB Mini TravelDrive USB 2.0 Flash Drive,90.57,3.0,16,1,2013
+956,2014-01-16,Office Supplies,Art,Newell 347,21.4,5.0,16,1,2014
+958,2012-02-16,Office Supplies,Paper,Xerox 1881,36.84,3.0,16,2,2012
+963,2013-04-16,Office Supplies,Paper,Xerox 1911,143.7,3.0,16,4,2013
+964,2014-04-16,Office Supplies,Paper,Xerox 1883,79.14,3.0,16,4,2014
+966,2011-05-16,Technology,Accessories,Imation Clip USB flash drive - 8 GB,56.4,3.0,16,5,2011
+967,2014-06-16,Technology,Phones,Anker 36W 4-Port USB Wall Charger Travel Power Adapter for iPhone 5s 5c 5,47.976,3.0,16,6,2014
+973,2013-08-16,Technology,Phones,AT&T 841000 Phone,165.6,3.0,16,8,2013
+974,2013-08-16,Office Supplies,Paper,"Rediform S.O.S. 1-Up Phone Message Bk, 4-1/4x3-1/16 Bk, 1 Form/Pg, 40 Messages/Bk, 3/Pk",37.52,4.0,16,8,2013
+976,2013-08-16,Technology,Phones,Nokia Lumia 521 (T-Mobile),71.976,3.0,16,8,2013
+980,2014-09-16,Furniture,Chairs,"Leather Task Chair, Black",218.352,3.0,16,9,2014
+983,2014-09-16,Office Supplies,Appliances,Belkin 5 Outlet SurgeMaster Power Centers,108.96,2.0,16,9,2014
+985,2014-09-16,Furniture,Chairs,Global Deluxe Steno Chair,184.752,3.0,16,9,2014
+987,2011-10-16,Technology,Accessories,Logitech Illuminated - Keyboard,179.97,3.0,16,10,2011
+990,2014-10-16,Office Supplies,Paper,Xerox 1919,204.95,5.0,16,10,2014
+991,2014-10-16,Office Supplies,Labels,"Avery 4027 File Folder Labels for Dot Matrix Printers, 5000 Labels per Box, White",152.65,5.0,16,10,2014
+992,2014-10-16,Office Supplies,Art,Panasonic KP-310 Heavy-Duty Electric Pencil Sharpener,87.92,4.0,16,10,2014
+997,2011-11-16,Technology,Phones,OtterBox Commuter Series Case - Samsung Galaxy S4,79.968,4.0,16,11,2011
+1002,2013-11-16,Technology,Accessories,Imation 16GB Mini TravelDrive USB 2.0 Flash Drive,99.39,3.0,16,11,2013
+1008,2011-12-16,Furniture,Furnishings,"Executive Impressions 14"" Contract Wall Clock",44.46,2.0,16,12,2011
+1010,2014-12-16,Technology,Phones,Panasonic KX TS3282B Corded phone,196.776,3.0,16,12,2014
+1011,2014-12-16,Office Supplies,Appliances,Hoover Commercial SteamVac,54.32,4.0,16,12,2014
+1012,2014-12-16,Office Supplies,Paper,"Wirebound Message Books, Two 4 1/4"" x 5"" Forms per Page",22.83,3.0,16,12,2014
+1014,2014-01-17,Furniture,Furnishings,"Eldon Expressions Wood and Plastic Desk Accessories, Cherry Wood",27.92,4.0,17,1,2014
+1016,2014-03-17,Office Supplies,Appliances,Bionaire Personal Warm Mist Humidifier/Vaporizer,140.67,3.0,17,3,2014
+1024,2014-04-17,Office Supplies,Storage,"Belkin 19"" Vented Equipment Shelf, Black",205.92,4.0,17,4,2014
+1026,2014-04-17,Office Supplies,Appliances,Hoover Commercial SteamVac,40.74,3.0,17,4,2014
+1030,2013-06-17,Office Supplies,Paper,"Wirebound Message Books, Four 2 3/4"" x 5"" Forms per Page, 600 Sets per Book",46.35,5.0,17,6,2013
+1033,2012-07-17,Furniture,Bookcases,"Sauder Camden County Collection Libraries, Planked Cherry Finish",195.466,2.0,17,7,2012
+1034,2013-08-17,Furniture,Tables,"Barricks 18"" x 48"" Non-Folding Utility Table with Bottom Storage Shelf",161.28,2.0,17,8,2013
+1035,2013-08-17,Office Supplies,Paper,Xerox 1931,32.4,5.0,17,8,2013
+1037,2011-09-17,Office Supplies,Envelopes,"Tyvek Interoffice Envelopes, 9 1/2"" x 12 1/2"", 100/Box",182.94,3.0,17,9,2011
+1038,2012-09-17,Office Supplies,Paper,Xerox 216,32.4,5.0,17,9,2012
+1045,2012-10-17,Office Supplies,Storage,"Eldon Base for stackable storage shelf, platinum",77.88,2.0,17,10,2012
+1048,2011-11-17,Technology,Accessories,Case Logic 2.4GHz Wireless Keyboard,99.98,2.0,17,11,2011
+1053,2012-11-17,Furniture,Furnishings,"DAX Contemporary Wood Frame with Silver Metal Mat, Desktop, 11 x 14 Size",80.96,4.0,17,11,2012
+1054,2012-11-17,Furniture,Furnishings,Advantus Panel Wall Certificate Holder - 8.5x11,36.6,3.0,17,11,2012
+1055,2012-11-17,Office Supplies,Paper,Xerox 203,32.4,5.0,17,11,2012
+1059,2014-11-17,Furniture,Furnishings,Eldon Radial Chair Mat for Low to Medium Pile Carpets,119.94,3.0,17,11,2014
+1063,2014-11-17,Office Supplies,Art,Newell 328,23.36,4.0,17,11,2014
+1064,2012-12-17,Office Supplies,Art,Sanford 52201 APSCO Electric Pencil Sharpener,204.85,5.0,17,12,2012
+1065,2012-12-17,Technology,Phones,Panasonic KX TS3282W Corded phone,135.984,2.0,17,12,2012
+1066,2012-12-17,Office Supplies,Binders,Avery Arch Ring Binders,92.96,2.0,17,12,2012
+1070,2014-12-17,Technology,Accessories,Imation Secure Drive + Hardware Encrypted USB flash drive - 16 GB,189.95,5.0,17,12,2014
+1071,2014-12-17,Office Supplies,Storage,"Safco Wire Cube Shelving System, For Use as 4 or 5 14"" Cubes, Black",158.9,5.0,17,12,2014
+1072,2014-12-17,Furniture,Chairs,"Global Value Steno Chair, Gray",97.184,2.0,17,12,2014
+1073,2014-12-17,Technology,Accessories,Microsoft Natural Ergonomic Keyboard 4000,149.95,5.0,17,12,2014
+1074,2014-12-17,Office Supplies,Labels,Avery 475,44.4,3.0,17,12,2014
+1076,2014-12-17,Office Supplies,Art,Bulldog Table or Wall-Mount Pencil Sharpener,29.95,5.0,17,12,2014
+1077,2014-12-17,Furniture,Chairs,"Global Deluxe Stacking Chair, Gray",81.568,2.0,17,12,2014
+1078,2014-12-17,Office Supplies,Binders,Prestige Round Ring Binders,24.32,5.0,17,12,2014
+1081,2012-02-18,Office Supplies,Labels,"Avery 4027 File Folder Labels for Dot Matrix Printers, 5000 Labels per Box, White",61.06,2.0,18,2,2012
+1087,2011-03-18,Furniture,Furnishings,Eldon Cleatmat Chair Mats for Medium Pile Carpets,111.0,2.0,18,3,2011
+1088,2013-03-18,Technology,Phones,i.Sound Portable Power - 8000 mAh,84.784,2.0,18,3,2013
+1094,2012-04-18,Office Supplies,Storage,Advantus Rolling Drawer Organizers,115.44,3.0,18,4,2012
+1096,2012-04-18,Office Supplies,Paper,Xerox 19,61.96,2.0,18,4,2012
+1098,2014-04-18,Furniture,Chairs,"Global Wood Trimmed Manager's Task Chair, Khaki",218.352,3.0,18,4,2014
+1100,2014-04-18,Office Supplies,Paper,"Rediform S.O.S. 1-Up Phone Message Bk, 4-1/4x3-1/16 Bk, 1 Form/Pg, 40 Messages/Bk, 3/Pk",28.14,3.0,18,4,2014
+1105,2011-06-18,Technology,Phones,Plantronics Cordless Phone Headset with In-line Volume - M214C,139.8,5.0,18,6,2011
+1106,2012-06-18,Office Supplies,Art,"BOSTON Ranger #55 Pencil Sharpener, Black",51.98,2.0,18,6,2012
+1107,2013-06-18,Office Supplies,Paper,Xerox 1914,219.84,4.0,18,6,2013
+1109,2013-06-18,Office Supplies,Paper,Xerox 1934,111.96,2.0,18,6,2013
+1111,2014-06-18,Office Supplies,Binders,Trimflex Flexible Post Binders,51.312,3.0,18,6,2014
+1113,2013-07-18,Office Supplies,Storage,"Eldon Base for stackable storage shelf, platinum",77.88,2.0,18,7,2013
+1116,2014-07-18,Office Supplies,Paper,Xerox 221,32.4,5.0,18,7,2014
+1117,2014-07-18,Office Supplies,Envelopes,"Peel & Seel Recycled Catalog Envelopes, Brown",57.9,5.0,18,7,2014
+1122,2014-08-18,Technology,Phones,OtterBox Defender Series Case - Samsung Galaxy S4,71.976,3.0,18,8,2014
+1123,2014-08-18,Office Supplies,Envelopes,Staples,23.36,2.0,18,8,2014
+1128,2012-09-18,Office Supplies,Paper,Rediform S.O.S. Phone Message Books,19.92,4.0,18,9,2012
+1129,2012-09-18,Furniture,Furnishings,Advantus Panel Wall Certificate Holder - 8.5x11,24.4,2.0,18,9,2012
+1133,2013-09-18,Technology,Phones,Panasonic Kx-TS550,73.584,2.0,18,9,2013
+1134,2013-09-18,Office Supplies,Art,Turquoise Lead Holder with Pocket Clip,20.1,3.0,18,9,2013
+1136,2013-10-18,Furniture,Bookcases,"Safco Value Mate Steel Bookcase, Baked Enamel Finish on Steel, Black",120.666,2.0,18,10,2013
+1140,2013-11-18,Office Supplies,Supplies,Acme Tagit Stainless Steel Antibacterial Scissors,49.5,5.0,18,11,2013
+1147,2013-02-19,Office Supplies,Paper,Xerox 1880,70.88,2.0,19,2,2013
+1148,2014-02-19,Technology,Phones,iHome FM Clock Radio with Lightning Dock,167.976,3.0,19,2,2014
+1149,2014-02-19,Technology,Accessories,Memorex Micro Travel Drive 32 GB,109.53,3.0,19,2,2014
+1152,2012-03-19,Office Supplies,Supplies,Acme Elite Stainless Steel Scissors,33.36,4.0,19,3,2012
+1160,2011-04-19,Furniture,Furnishings,"Executive Impressions 13"" Chairman Wall Clock",76.14,3.0,19,4,2011
+1161,2013-05-19,Office Supplies,Storage,Home/Office Personal File Carts,104.28,3.0,19,5,2013
+1163,2012-06-19,Office Supplies,Envelopes,Cameo Buff Policy Envelopes,186.69,3.0,19,6,2012
+1169,2011-08-19,Office Supplies,Binders,Satellite Sectional Post Binders,69.456,2.0,19,8,2011
+1172,2012-09-19,Office Supplies,Paper,Personal Creations Ink Jet Cards and Labels,22.96,2.0,19,9,2012
+1173,2012-09-19,Furniture,Furnishings,"Seth Thomas 8 1/2"" Cubicle Clock",60.84,3.0,19,9,2012
+1178,2014-09-19,Office Supplies,Paper,Xerox 1911,143.7,3.0,19,9,2014
+1182,2011-10-19,Technology,Phones,Panasonic KX TS208W Corded phone,117.576,3.0,19,10,2011
+1183,2011-10-19,Office Supplies,Paper,Xerox 1917,146.73,3.0,19,10,2011
+1193,2013-11-19,Office Supplies,Binders,Recycled Premium Regency Composition Covers,61.12,5.0,19,11,2013
+1195,2011-12-19,Technology,Phones,Clarity 53712,211.168,4.0,19,12,2011
+1196,2011-12-19,Office Supplies,Fasteners,Advantus T-Pin Paper Clips,22.55,5.0,19,12,2011
+1204,2013-12-19,Technology,Accessories,SanDisk Cruzer 64 GB USB Flash Drive,72.64,2.0,19,12,2013
+1205,2013-12-19,Furniture,Furnishings,"Eldon Expressions Wood and Plastic Desk Accessories, Oak",39.92,4.0,19,12,2013
+1207,2014-12-19,Technology,Accessories,Logitech Illuminated - Keyboard,119.98,2.0,19,12,2014
+1209,2014-12-19,Office Supplies,Binders,Binding Machine Supplies,46.672,2.0,19,12,2014
+1210,2014-12-19,Office Supplies,Paper,Xerox 213,32.4,5.0,19,12,2014
+1214,2014-02-20,Furniture,Furnishings,Tensor Computer Mounted Lamp,44.67,3.0,20,2,2014
+1217,2014-03-20,Technology,Accessories,Logitech K350 2.4Ghz Wireless Keyboard,99.54,2.0,20,3,2014
+1219,2014-03-20,Technology,Accessories,Logitech Wireless Marathon Mouse M705,199.96,4.0,20,3,2014
+1225,2011-04-20,Furniture,Furnishings,"GE 4 Foot Flourescent Tube, 40 Watt",59.92,4.0,20,4,2011
+1226,2013-04-20,Office Supplies,Art,Panasonic KP-4ABK Battery-Operated Pencil Sharpener,73.2,5.0,20,4,2013
+1227,2013-04-20,Technology,Phones,PowerGen Dual USB Car Charger,39.96,5.0,20,4,2013
+1228,2013-04-20,Office Supplies,Paper,"Adams Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4""X8 1/2"", 200/Messages",22.72,4.0,20,4,2013
+1235,2014-05-20,Office Supplies,Binders,GBC Twin Loop Wire Binding Elements,133.12,5.0,20,5,2014
+1239,2012-06-20,Technology,Phones,netTALK DUO VoIP Telephone Service,125.976,3.0,20,6,2012
+1242,2014-06-20,Furniture,Furnishings,"DAX Copper Panel Document Frame, 5 x 7 Size",50.32,4.0,20,6,2014
+1243,2014-06-20,Office Supplies,Paper,Xerox 1907,24.56,2.0,20,6,2014
+1247,2011-07-20,Furniture,Furnishings,Nu-Dell Leatherette Frames,43.02,3.0,20,7,2011
+1248,2011-07-20,Office Supplies,Paper,"Wirebound Message Books, Two 4 1/4"" x 5"" Forms per Page",22.83,3.0,20,7,2011
+1249,2011-07-20,Technology,Accessories,"Maxell 74 Minute CD-R Spindle, 50/Pack",41.94,2.0,20,7,2011
+1250,2011-07-20,Office Supplies,Paper,Xerox 1897,19.92,4.0,20,7,2011
+1255,2013-07-20,Technology,Phones,Griffin GC36547 PowerJolt SE Lightning Charger,35.984,2.0,20,7,2013
+1256,2011-09-20,Office Supplies,Appliances,Staples,43.92,4.0,20,9,2011
+1257,2011-09-20,Office Supplies,Binders,Ibico Plastic and Wire Spiral Binding Combs,20.232,3.0,20,9,2011
+1258,2011-09-20,Office Supplies,Paper,"Wirebound Message Book, 4 per Page",21.72,4.0,20,9,2011
+1265,2014-09-20,Technology,Accessories,Microsoft Natural Ergonomic Keyboard 4000,149.95,5.0,20,9,2014
+1266,2014-09-20,Office Supplies,Art,Boston 16765 Mini Stand Up Battery Pencil Sharpener,23.32,2.0,20,9,2014
+1272,2014-10-20,Office Supplies,Binders,JM Magazine Binder,39.624,3.0,20,10,2014
+1273,2014-10-20,Furniture,Furnishings,"Linden 10"" Round Wall Clock, Black",30.56,2.0,20,10,2014
+1275,2014-10-20,Furniture,Tables,Anderson Hickey Conga Table Tops & Accessories,24.368,2.0,20,10,2014
+1278,2012-11-20,Office Supplies,Binders,"Performers Binder/Pad Holder, Black",89.696,4.0,20,11,2012
+1279,2012-11-20,Office Supplies,Labels,Avery 485,50.12,4.0,20,11,2012
+1283,2012-11-20,Furniture,Furnishings,Dana Swing-Arm Lamps,32.04,3.0,20,11,2012
+1285,2014-11-20,Technology,Phones,Square Credit Card Reader,31.968,4.0,20,11,2014
+1288,2011-12-20,Office Supplies,Binders,"Premium Transparent Presentation Covers, No Pattern/Clear, 8 1/2"" x 11""",155.12,5.0,20,12,2011
+1289,2011-12-20,Office Supplies,Art,Boston Home & Office Model 2000 Electric Pencil Sharpeners,47.3,2.0,20,12,2011
+1292,2014-12-20,Office Supplies,Binders,Deluxe Heavy-Duty Vinyl Round Ring Binder,36.672,2.0,20,12,2014
+1296,2013-01-21,Furniture,Chairs,Global Super Steno Chair,153.568,2.0,21,1,2013
+1298,2014-01-21,Technology,Phones,RCA Visys Integrated PBX 8-Line Router,160.776,3.0,21,1,2014
+1299,2014-01-21,Office Supplies,Art,Staples,24.2,5.0,21,1,2014
+1305,2014-02-21,Technology,Phones,Logitech Mobile Speakerphone P710e - speaker phone,215.968,2.0,21,2,2014
+1314,2013-06-21,Furniture,Chairs,Hon Valutask Swivel Chairs,161.568,2.0,21,6,2013
+1315,2013-06-21,Office Supplies,Storage,Fellowes Bankers Box Recycled Super Stor/Drawer,161.94,3.0,21,6,2013
+1317,2013-06-21,Office Supplies,Appliances,Belkin 6 Outlet Metallic Surge Strip,21.78,2.0,21,6,2013
+1323,2011-07-21,Office Supplies,Art,Newell 334,99.2,5.0,21,7,2011
+1326,2012-08-21,Office Supplies,Paper,Xerox 191,59.94,3.0,21,8,2012
+1328,2012-08-21,Office Supplies,Paper,Xerox 1974,23.92,4.0,21,8,2012
+1331,2014-08-21,Technology,Phones,Plantronics Encore H101 Dual Earpieces Headset,107.88,3.0,21,8,2014
+1334,2014-08-21,Office Supplies,Paper,Xerox 203,25.92,4.0,21,8,2014
+1336,2011-09-21,Office Supplies,Envelopes,"#10 White Business Envelopes,4 1/8 x 9 1/2",78.35,5.0,21,9,2011
+1337,2011-09-21,Office Supplies,Art,Newell 34,59.52,3.0,21,9,2011
+1345,2013-09-21,Office Supplies,Binders,Ibico Plastic Spiral Binding Combs,48.64,2.0,21,9,2013
+1346,2013-09-21,Office Supplies,Paper,Xerox 1944,77.52,2.0,21,9,2013
+1348,2011-10-21,Office Supplies,Binders,Plastic Binding Combs,36.36,3.0,21,10,2011
+1351,2014-10-21,Office Supplies,Binders,Wilson Jones Four-Pocket Poly Binders,20.928,4.0,21,10,2014
+1356,2013-11-21,Technology,Accessories,Sony Micro Vault Click 4 GB USB 2.0 Flash Drive,27.88,2.0,21,11,2013
+1360,2014-11-21,Furniture,Furnishings,Coloredge Poster Frame,42.6,3.0,21,11,2014
+1363,2013-01-22,Office Supplies,Labels,Avery 475,44.4,3.0,22,1,2013
+1364,2013-01-22,Office Supplies,Labels,Avery 476,20.65,5.0,22,1,2013
+1369,2012-03-22,Office Supplies,Paper,Staples,105.52,4.0,22,3,2012
+1370,2012-03-22,Furniture,Furnishings,Tenex B1-RE Series Chair Mats for Low Pile Carpets,91.96,2.0,22,3,2012
+1375,2012-04-22,Office Supplies,Art,Boston 1730 StandUp Electric Pencil Sharpener,64.14,3.0,22,4,2012
+1376,2012-04-22,Technology,Phones,"Logitech B530 USB Headset - headset - Full size, Binaural",88.776,3.0,22,4,2012
+1381,2013-05-22,Technology,Phones,Motorola HK250 Universal Bluetooth Headset,55.176,3.0,22,5,2013
+1382,2013-05-22,Technology,Accessories,Imation 16GB Mini TravelDrive USB 2.0 Flash Drive,66.26,2.0,22,5,2013
+1385,2011-07-22,Furniture,Tables,Safco Drafting Table,170.352,3.0,22,7,2011
+1391,2014-07-22,Furniture,Chairs,Hon Olson Stacker Stools,225.296,2.0,22,7,2014
+1392,2014-07-22,Office Supplies,Binders,GBC Premium Transparent Covers with Diagonal Lined Pattern,50.352,3.0,22,7,2014
+1397,2013-08-22,Technology,Phones,Motorola HK250 Universal Bluetooth Headset,91.96,5.0,22,8,2013
+1398,2013-08-22,Technology,Phones,Anker Astro Mini 3000mAh Ultra-Compact Portable Charger,31.984,2.0,22,8,2013
+1404,2014-08-22,Furniture,Furnishings,Tenex Chairmats For Use with Hard Floors,129.92,4.0,22,8,2014
+1405,2014-08-22,Office Supplies,Appliances,Fellowes Command Center 5-outlet power strip,203.52,3.0,22,8,2014
+1406,2014-08-22,Office Supplies,Labels,"Avery Address/Shipping Labels for Typewriters, 4"" x 2""",51.75,5.0,22,8,2014
+1409,2011-09-22,Office Supplies,Storage,"File Shuttle II and Handi-File, Black",169.45,5.0,22,9,2011
+1410,2011-09-22,Office Supplies,Storage,Tennsco Commercial Shelving,40.68,2.0,22,9,2011
+1411,2012-09-22,Furniture,Furnishings,Luxo Professional Combination Clamp-On Lamps,204.6,2.0,22,9,2012
+1412,2012-09-22,Office Supplies,Appliances,Kensington 6 Outlet Guardian Standard Surge Protector,61.44,3.0,22,9,2012
+1417,2013-10-22,Office Supplies,Storage,"Belkin 19"" Vented Equipment Shelf, Black",154.44,3.0,22,10,2013
+1418,2013-10-22,Office Supplies,Paper,"Rediform Wirebound ""Phone Memo"" Message Book, 11 x 5-3/4",22.92,3.0,22,10,2013
+1419,2013-10-22,Furniture,Furnishings,"Eldon Expressions Wood and Plastic Desk Accessories, Oak",19.96,2.0,22,10,2013
+1422,2012-11-22,Office Supplies,Storage,"Personal Folder Holder, Ebony",33.63,3.0,22,11,2012
+1424,2012-11-22,Office Supplies,Paper,Xerox 1887,37.94,2.0,22,11,2012
+1425,2013-11-22,Office Supplies,Paper,Xerox 222,32.4,5.0,22,11,2013
+1427,2014-11-22,Office Supplies,Storage,Eldon Portable Mobile Manager,56.56,2.0,22,11,2014
+1428,2014-11-22,Office Supplies,Binders,Canvas Sectional Post Binders,40.736,2.0,22,11,2014
+1435,2014-12-22,Office Supplies,Storage,"Fellowes Mobile File Cart, Black",124.36,2.0,22,12,2014
+1444,2012-03-23,Office Supplies,Paper,"REDIFORM Incoming/Outgoing Call Register, 11"" X 8 1/2"", 100 Messages",33.36,4.0,23,3,2012
+1446,2013-04-23,Furniture,Furnishings,Ultra Door Pull Handle,31.56,3.0,23,4,2013
+1448,2013-05-23,Technology,Phones,Nortel Business Series Terminal T7208 Digital phone,222.384,2.0,23,5,2013
+1453,2012-06-23,Technology,Phones,"Plantronics CS 50-USB - headset - Convertible, Monaural",217.584,2.0,23,6,2012
+1454,2012-06-23,Technology,Phones,JBL Micro Wireless Portable Bluetooth Speaker,143.976,3.0,23,6,2012
+1458,2011-07-23,Office Supplies,Supplies,Acme Softgrip Scissors,40.7,5.0,23,7,2011
+1459,2011-07-23,Technology,Accessories,Imation 8gb Micro Traveldrive Usb 2.0 Flash Drive,45.0,3.0,23,7,2011
+1461,2011-08-23,Office Supplies,Binders,GBC Linen Binding Covers,49.568,2.0,23,8,2011
+1465,2011-09-23,Technology,Phones,netTALK DUO VoIP Telephone Service,83.984,2.0,23,9,2011
+1466,2014-09-23,Office Supplies,Supplies,Fiskars Softgrip Scissors,21.96,2.0,23,9,2014
+1476,2011-11-23,Office Supplies,Envelopes,Pastel Pink Envelopes,21.84,3.0,23,11,2011
+1478,2013-12-23,Furniture,Furnishings,Magnifier Swing Arm Lamp,41.96,2.0,23,12,2013
+1481,2011-03-24,Furniture,Furnishings,"DAX Contemporary Wood Frame with Silver Metal Mat, Desktop, 11 x 14 Size",40.48,2.0,24,3,2011
+1484,2013-04-24,Office Supplies,Envelopes,"Recycled Interoffice Envelopes with String and Button Closure, 10 x 13",71.97,3.0,24,4,2013
+1489,2014-04-24,Furniture,Furnishings,Eldon 500 Class Desk Accessories,24.14,2.0,24,4,2014
+1490,2013-05-24,Furniture,Furnishings,"Eldon Image Series Desk Accessories, Ebony",37.05,3.0,24,5,2013
+1491,2014-05-24,Furniture,Tables,"Lesro Sheffield Collection Coffee Table, End Table, Center Table, Corner Table",171.288,3.0,24,5,2014
+1493,2013-06-24,Office Supplies,Storage,Mobile Personal File Cube,93.68,4.0,24,6,2013
+1494,2013-06-24,Office Supplies,Labels,Avery 516,21.93,3.0,24,6,2013
+1498,2011-09-24,Office Supplies,Storage,"Gould Plastics 9-Pocket Panel Bin, 18-3/8w x 5-1/4d x 20-1/2h, Black",211.96,4.0,24,9,2011
+1505,2014-09-24,Office Supplies,Appliances,APC 7 Outlet Network SurgeArrest Surge Protector,160.96,2.0,24,9,2014
+1506,2014-09-24,Office Supplies,Binders,Ibico Plastic Spiral Binding Combs,72.96,3.0,24,9,2014
+1508,2011-10-24,Office Supplies,Binders,Avery Premier Heavy-Duty Binder with Round Locking Rings,34.272,3.0,24,10,2011
+1510,2011-11-24,Furniture,Furnishings,"Eldon Delta Triangular Chair Mat, 52"" x 58"", Clear",151.72,4.0,24,11,2011
+1515,2012-11-24,Office Supplies,Paper,Xerox 1943,146.73,3.0,24,11,2012
+1516,2012-11-24,Furniture,Furnishings,Luxo Economy Swing Arm Lamp,79.76,4.0,24,11,2012
+1527,2011-12-24,Technology,Accessories,Sony 32GB Class 10 Micro SDHC R40 Memory Card,62.85,3.0,24,12,2011
+1531,2012-12-24,Office Supplies,Binders,Avery Hole Reinforcements,19.936,4.0,24,12,2012
+1532,2012-12-24,Office Supplies,Fasteners,"Vinyl Coated Wire Paper Clips in Organizer Box, 800/Box",45.92,4.0,24,12,2012
+1535,2014-01-25,Technology,Phones,Jensen SMPS-640 - speaker phone,110.352,3.0,25,1,2014
+1536,2014-01-25,Office Supplies,Appliances,"Acco Six-Outlet Power Strip, 4' Cord Length",25.86,3.0,25,1,2014
+1538,2011-03-25,Technology,Accessories,Imation Swivel Flash Drive USB flash drive - 8 GB,45.48,4.0,25,3,2011
+1544,2012-04-25,Office Supplies,Envelopes,Laser & Ink Jet Business Envelopes,21.34,2.0,25,4,2012
+1551,2012-06-25,Furniture,Furnishings,Dana Halogen Swing-Arm Architect Lamp,204.85,5.0,25,6,2012
+1552,2012-06-25,Office Supplies,Binders,"GBC Velobind Prepunched Cover Sets, Regency Series",88.752,3.0,25,6,2012
+1553,2012-06-25,Office Supplies,Art,Staples,20.96,2.0,25,6,2012
+1557,2013-06-25,Technology,Phones,Macally Suction Cup Mount,38.24,4.0,25,6,2013
+1563,2011-07-25,Office Supplies,Storage,"Fellowes Personal Hanging Folder Files, Navy",53.72,4.0,25,7,2011
+1569,2011-08-25,Technology,Accessories,SanDisk Cruzer 32 GB USB Flash Drive,95.1,5.0,25,8,2011
+1570,2011-08-25,Office Supplies,Storage,Portable Personal File Box,48.84,4.0,25,8,2011
+1571,2011-08-25,Office Supplies,Paper,Xerox 23,25.92,4.0,25,8,2011
+1573,2012-08-25,Office Supplies,Appliances,Fellowes Advanced Computer Series Surge Protectors,105.96,4.0,25,8,2012
+1578,2013-09-25,Furniture,Furnishings,Nu-Dell Executive Frame,63.2,5.0,25,9,2013
+1579,2013-09-25,Office Supplies,Paper,"REDIFORM Incoming/Outgoing Call Register, 11"" X 8 1/2"", 100 Messages",41.7,5.0,25,9,2013
+1580,2013-09-25,Office Supplies,Storage,"Tennsco Lockers, Gray",41.96,2.0,25,9,2013
+1585,2011-10-25,Office Supplies,Binders,GBC VeloBind Cover Sets,49.408,4.0,25,10,2011
+1587,2012-10-25,Office Supplies,Art,Boston 19500 Mighty Mite Electric Pencil Sharpener,60.45,3.0,25,10,2012
+1591,2013-10-25,Technology,Accessories,Micro Innovations USB RF Wireless Keyboard with Mouse,100.0,4.0,25,10,2013
+1595,2011-11-25,Office Supplies,Paper,"Wirebound Message Books, Four 2 3/4 x 5 White Forms per Page",26.76,4.0,25,11,2011
+1596,2011-11-25,Furniture,Furnishings,Staples,23.88,3.0,25,11,2011
+1601,2013-11-25,Technology,Phones,"iKross Bluetooth Portable Keyboard + Cell Phone Stand Holder + Brush for Apple iPhone 5S 5C 5, 4S 4",33.52,2.0,25,11,2013
+1605,2014-11-25,Office Supplies,Art,BIC Liqua Brite Liner,27.76,4.0,25,11,2014
+1606,2014-11-25,Furniture,Tables,Hon 61000 Series Interactive Training Tables,71.088,2.0,25,11,2014
+1615,2014-12-25,Office Supplies,Binders,Vinyl Sectional Post Binders,90.48,3.0,25,12,2014
+1617,2011-03-26,Technology,Accessories,SanDisk Ultra 32 GB MicroSDHC Class 10 Memory Card,66.3,3.0,26,3,2011
+1618,2011-03-26,Technology,Phones,Griffin GC17055 Auxiliary Audio Cable,28.784,2.0,26,3,2011
+1619,2011-03-26,Office Supplies,Binders,Wilson Jones Leather-Like Binders with DublLock Round Rings,27.936,4.0,26,3,2011
+1623,2014-03-26,Technology,Phones,Clearsounds A400,211.168,4.0,26,3,2014
+1624,2014-03-26,Office Supplies,Appliances,Acco Smartsocket Color-Coded Six-Outlet AC Adapter Model Surge Protectors,176.04,4.0,26,3,2014
+1625,2014-03-26,Office Supplies,Binders,Avery Arch Ring Binders,185.92,4.0,26,3,2014
+1628,2011-04-26,Office Supplies,Art,Newell 347,21.4,5.0,26,4,2011
+1632,2012-04-26,Furniture,Chairs,SAFCO Optional Arm Kit for Workspace Cribbage Stacking Chair,63.936,3.0,26,4,2012
+1633,2012-04-26,Office Supplies,Art,Newell 345,59.52,3.0,26,4,2012
+1634,2012-04-26,Office Supplies,Binders,GBC Premium Transparent Covers with Diagonal Lined Pattern,50.352,3.0,26,4,2012
+1636,2014-04-26,Technology,Accessories,Sony 64GB Class 10 Micro SDHC R40 Memory Card,107.97,3.0,26,4,2014
+1637,2014-04-26,Office Supplies,Binders,Surelock Post Binders,73.344,3.0,26,4,2014
+1640,2011-05-26,Technology,Phones,VTech DS6151,201.584,2.0,26,5,2011
+1642,2011-05-26,Technology,Phones,netTALK DUO VoIP Telephone Service,83.984,2.0,26,5,2011
+1643,2011-05-26,Furniture,Chairs,Hon Olson Stacker Stools,225.296,2.0,26,5,2011
+1644,2013-06-26,Office Supplies,Appliances,Fellowes Mighty 8 Compact Surge Protector,60.81,3.0,26,6,2013
+1645,2012-07-26,Office Supplies,Envelopes,Airmail Envelopes,167.86,2.0,26,7,2012
+1646,2012-07-26,Office Supplies,Art,Newell 334,99.2,5.0,26,7,2012
+1657,2011-09-26,Furniture,Chairs,"Leather Task Chair, Black",145.568,2.0,26,9,2011
+1659,2012-09-26,Office Supplies,Storage,"Sortfiler Multipurpose Personal File Organizer, Black",64.17,3.0,26,9,2012
+1660,2012-09-26,Office Supplies,Envelopes,Cameo Buff Policy Envelopes,124.46,2.0,26,9,2012
+1665,2013-09-26,Office Supplies,Labels,Alphabetical Labels for Top Tab Filing,29.6,2.0,26,9,2013
+1671,2011-11-26,Office Supplies,Paper,Xerox 1893,81.98,2.0,26,11,2011
+1672,2011-11-26,Office Supplies,Appliances,Fellowes Mighty 8 Compact Surge Protector,40.54,2.0,26,11,2011
+1676,2013-11-26,Furniture,Chairs,"Padded Folding Chairs, Black, 4/Carton",194.352,3.0,26,11,2013
+1678,2014-11-26,Technology,Phones,PayAnywhere Card Reader,39.96,5.0,26,11,2014
+1688,2014-12-26,Office Supplies,Binders,GBC DocuBind P50 Personal Binding Machine,153.552,3.0,26,12,2014
+1694,2014-02-27,Office Supplies,Paper,Xerox 1908,223.92,4.0,27,2,2014
+1696,2014-02-27,Office Supplies,Appliances,Kensington 6 Outlet Guardian Standard Surge Protector,81.92,4.0,27,2,2014
+1697,2014-02-27,Furniture,Furnishings,Tenex B1-RE Series Chair Mats for Low Pile Carpets,91.96,2.0,27,2,2014
+1698,2014-02-27,Office Supplies,Paper,Xerox 1924,23.12,4.0,27,2,2014
+1699,2014-02-27,Office Supplies,Paper,"It's Hot Message Books with Stickers, 2 3/4"" x 5""",29.6,4.0,27,2,2014
+1705,2013-05-27,Technology,Phones,Cisco SPA508G,211.168,4.0,27,5,2013
+1713,2013-06-27,Furniture,Furnishings,"Eldon Expressions Wood Desk Accessories, Oak",22.14,3.0,27,6,2013
+1719,2011-08-27,Technology,Phones,Cisco SPA 501G IP Phone,213.48,3.0,27,8,2011
+1720,2011-08-27,Office Supplies,Binders,"Wilson Jones Hanging View Binder, White, 1""",22.72,4.0,27,8,2011
+1723,2012-08-27,Office Supplies,Paper,Xerox 1973,114.2,5.0,27,8,2012
+1724,2012-08-27,Office Supplies,Supplies,Fiskars Softgrip Scissors,32.94,3.0,27,8,2012
+1728,2013-08-27,Office Supplies,Paper,Xerox 1979,154.9,5.0,27,8,2013
+1732,2011-09-27,Office Supplies,Paper,Xerox 1919,81.98,2.0,27,9,2011
+1733,2012-09-27,Office Supplies,Paper,Xerox 1916,146.82,3.0,27,9,2012
+1737,2013-09-27,Office Supplies,Paper,Great White Multi-Use Recycled Paper (20Lb. and 84 Bright),29.9,5.0,27,9,2013
+1738,2013-09-27,Office Supplies,Storage,Advantus Rolling Storage Box,51.45,3.0,27,9,2013
+1739,2013-09-27,Office Supplies,Art,SANFORD Major Accent Highlighters,35.4,5.0,27,9,2013
+1748,2012-11-27,Office Supplies,Paper,"Snap-A-Way Black Print Carbonless Ruled Speed Letter, Triplicate",113.82,3.0,27,11,2012
+1749,2012-11-27,Technology,Accessories,Sony 64GB Class 10 Micro SDHC R40 Memory Card,107.97,3.0,27,11,2012
+1752,2013-11-27,Office Supplies,Appliances,Belkin F9S820V06 8 Outlet Surge,64.96,2.0,27,11,2013
+1755,2011-12-27,Office Supplies,Binders,GBC VeloBind Cover Sets,37.056,3.0,27,12,2011
+1760,2011-12-27,Office Supplies,Storage,Advantus Rolling Storage Box,51.45,3.0,27,12,2011
+1763,2012-12-27,Office Supplies,Appliances,Belkin F9G930V10-GRY 9 Outlet Surge,106.96,2.0,27,12,2012
+1768,2013-12-27,Furniture,Chairs,"Global Armless Task Chair, Royal Blue",146.352,3.0,27,12,2013
+1769,2013-12-27,Office Supplies,Art,Model L Table or Wall-Mount Pencil Sharpener,53.97,3.0,27,12,2013
+1774,2011-01-28,Office Supplies,Art,Dixon Ticonderoga Core-Lock Colored Pencils,36.44,4.0,28,1,2011
+1775,2013-01-28,Office Supplies,Art,Newell 345,39.68,2.0,28,1,2013
+1777,2012-03-28,Office Supplies,Paper,Xerox 1977,33.4,5.0,28,3,2012
+1778,2014-03-28,Office Supplies,Paper,Xerox 1913,110.96,2.0,28,3,2014
+1779,2014-03-28,Office Supplies,Paper,Xerox 1982,45.68,2.0,28,3,2014
+1782,2014-04-28,Office Supplies,Art,"Boston School Pro Electric Pencil Sharpener, 1670",123.92,4.0,28,4,2014
+1783,2014-04-28,Office Supplies,Art,Boston Home & Office Model 2000 Electric Pencil Sharpeners,47.3,2.0,28,4,2014
+1786,2013-06-28,Technology,Phones,Ooma Telo VoIP Home Phone System,201.584,2.0,28,6,2013
+1790,2012-08-28,Office Supplies,Binders,GBC Wire Binding Combs,41.36,5.0,28,8,2012
+1791,2012-08-28,Technology,Phones,invisibleSHIELD by ZAGG Smudge-Free Screen Protector,43.176,3.0,28,8,2012
+1797,2014-08-28,Furniture,Furnishings,"GE 48"" Fluorescent Tube, Cool White Energy Saver, 34 Watts, 30/Box",198.46,2.0,28,8,2014
+1799,2014-08-28,Office Supplies,Paper,White Computer Printout Paper by Universal,116.28,3.0,28,8,2014
+1800,2014-08-28,Office Supplies,Supplies,Acme Preferred Stainless Steel Scissors,28.4,5.0,28,8,2014
+1801,2012-09-28,Office Supplies,Appliances,Holmes HEPA Air Purifier,43.56,2.0,28,9,2012
+1802,2012-09-28,Office Supplies,Appliances,"Acco Smartsocket Table Surge Protector, 6 Color-Coded Adapter Outlets",186.15,3.0,28,9,2012
+1803,2012-09-28,Office Supplies,Appliances,Holmes Odor Grabber,43.26,3.0,28,9,2012
+1805,2012-09-28,Office Supplies,Supplies,Acme Galleria Hot Forged Steel Scissors with Colored Handles,47.19,3.0,28,9,2012
+1806,2012-09-28,Technology,Phones,Motorola HK250 Universal Bluetooth Headset,36.784,2.0,28,9,2012
+1809,2011-10-28,Office Supplies,Storage,Eldon Portable Mobile Manager,141.4,5.0,28,10,2011
+1812,2013-10-28,Office Supplies,Binders,Avery Legal 4-Ring Binder,67.136,4.0,28,10,2013
+1813,2013-10-28,Office Supplies,Appliances,Staples,43.92,4.0,28,10,2013
+1814,2013-10-28,Office Supplies,Binders,"Acco Data Flex Cable Posts For Top & Bottom Load Binders, 6"" Capacity",25.032,3.0,28,10,2013
+1817,2014-10-28,Technology,Phones,Griffin GC17055 Auxiliary Audio Cable,71.96,5.0,28,10,2014
+1818,2014-10-28,Technology,Phones,Jackery Bar Premium Fast-charging Portable Charger,95.84,4.0,28,10,2014
+1821,2011-11-28,Office Supplies,Appliances,Acco 6 Outlet Guardian Premium Surge Suppressor,43.68,3.0,28,11,2011
+1822,2011-11-28,Office Supplies,Labels,Avery 489,41.4,4.0,28,11,2011
+1824,2012-11-28,Office Supplies,Appliances,"Holmes Visible Mist Ultrasonic Humidifier with 2.3-Gallon Output per Day, Replacement Filter",45.28,4.0,28,11,2012
+1829,2014-11-28,Technology,Phones,Griffin GC17055 Auxiliary Audio Cable,57.568,4.0,28,11,2014
+1831,2011-12-28,Office Supplies,Supplies,Acme Box Cutter Scissors,51.15,5.0,28,12,2011
+1834,2014-01-29,Furniture,Furnishings,"DAX Executive Solid Wood Document Frame, Desktop or Hang, Mahogany, 5 x 7",37.74,3.0,29,1,2014
+1835,2012-02-29,Furniture,Chairs,Global Deluxe Steno Chair,184.752,3.0,29,2,2012
+1838,2012-03-29,Technology,Accessories,Memorex Froggy Flash Drive 8 GB,53.25,3.0,29,3,2012
+1840,2012-03-29,Furniture,Furnishings,G.E. Longer-Life Indoor Recessed Floodlight Bulbs,19.92,3.0,29,3,2012
+1841,2013-03-29,Office Supplies,Storage,Rogers Deluxe File Chest,87.92,4.0,29,3,2013
+1846,2014-03-29,Office Supplies,Paper,Xerox 1977,20.04,3.0,29,3,2014
+1849,2014-03-29,Office Supplies,Paper,Xerox 1968,26.72,4.0,29,3,2014
+1850,2013-04-29,Furniture,Chairs,"Global Stack Chair without Arms, Black",41.568,2.0,29,4,2013
+1855,2013-05-29,Office Supplies,Binders,"Wilson Jones Hanging View Binder, White, 1""",22.72,4.0,29,5,2013
+1856,2013-06-29,Office Supplies,Binders,GBC Premium Transparent Covers with Diagonal Lined Pattern,33.568,2.0,29,6,2013
+1862,2011-08-29,Office Supplies,Paper,Xerox 1940,109.92,2.0,29,8,2011
+1865,2011-09-29,Furniture,Furnishings,Luxo Professional Combination Clamp-On Lamps,204.6,2.0,29,9,2011
+1870,2012-10-29,Office Supplies,Envelopes,"Strathmore #10 Envelopes, Ultimate White",210.84,4.0,29,10,2012
+1871,2012-10-29,Office Supplies,Paper,Xerox 1898,33.4,5.0,29,10,2012
+1873,2013-10-29,Office Supplies,Binders,"Square Ring Data Binders, Rigid 75 Pt. Covers, 11"" x 14-7/8""",49.536,3.0,29,10,2013
+1877,2011-11-29,Office Supplies,Fasteners,Staples,30.4,5.0,29,11,2011
+1878,2012-11-29,Office Supplies,Art,"Boston Electric Pencil Sharpener, Model 1818, Charcoal Black",56.3,2.0,29,11,2012
+1880,2014-11-29,Office Supplies,Labels,Round Specialty Laser Printer Labels,62.65,5.0,29,11,2014
+1882,2011-12-29,Technology,Phones,Mophie Juice Pack Helium for iPhone,191.976,3.0,29,12,2011
+1886,2011-12-29,Office Supplies,Paper,Xerox 1981,21.12,4.0,29,12,2011
+1887,2011-12-29,Furniture,Furnishings,Stacking Trays by OIC,24.9,5.0,29,12,2011
+1895,2013-01-30,Office Supplies,Binders,GBC Wire Binding Strips,50.784,2.0,30,1,2013
+1901,2011-03-30,Furniture,Bookcases,O'Sullivan Living Dimensions 2-Shelf Bookcases,205.666,2.0,30,3,2011
+1902,2012-04-30,Office Supplies,Art,Newell 324,34.65,3.0,30,4,2012
+1903,2012-04-30,Technology,Phones,Cush Cases Heavy Duty Rugged Cover Case for Samsung Galaxy S5 - Purple,19.8,5.0,30,4,2012
+1904,2011-06-30,Office Supplies,Art,"BIC Brite Liner Highlighters, Chisel Tip",32.4,5.0,30,6,2011
+1907,2014-06-30,Office Supplies,Storage,"Trav-L-File Heavy-Duty Shuttle II, Black",130.71,3.0,30,6,2014
+1908,2014-06-30,Technology,Accessories,Enermax Briskie RF Wireless Keyboard and Mouse Combo,62.31,3.0,30,6,2014
+1914,2014-08-30,Furniture,Furnishings,Electrix Fluorescent Magnifier Lamps & Weighted Base,148.02,3.0,30,8,2014
+1917,2013-09-30,Office Supplies,Binders,Avery Self-Adhesive Photo Pockets for Polaroid Photos,27.24,5.0,30,9,2013
+1919,2014-09-30,Office Supplies,Appliances,"Fellowes Premier Superior Surge Suppressor, 10-Outlet, With Phone and Remote",97.84,2.0,30,9,2014
+1921,2014-09-30,Office Supplies,Binders,Binding Machine Supplies,46.672,2.0,30,9,2014
+1922,2014-09-30,Office Supplies,Art,Newell 334,99.2,5.0,30,9,2014
+1929,2012-12-30,Office Supplies,Paper,Xerox 1929,68.52,3.0,30,12,2012
+1930,2012-12-30,Office Supplies,Storage,2300 Heavy-Duty Transfer File Systems by Perma,74.94,3.0,30,12,2012
+1931,2013-12-30,Office Supplies,Supplies,Fiskars Spring-Action Scissors,27.96,2.0,30,12,2013
+1938,2013-01-31,Office Supplies,Paper,Staples,56.7,5.0,31,1,2013
+1940,2014-01-31,Office Supplies,Storage,Space Solutions Commercial Steel Shelving,129.3,2.0,31,1,2014
+1944,2011-03-31,Office Supplies,Appliances,Fellowes Advanced Computer Series Surge Protectors,52.98,2.0,31,3,2011
+1946,2014-03-31,Furniture,Furnishings,Flat Face Poster Frame,94.2,5.0,31,3,2014
+1948,2012-05-31,Office Supplies,Paper,Xerox 1883,105.52,4.0,31,5,2012
+1954,2014-05-31,Office Supplies,Paper,"Rediform S.O.S. 1-Up Phone Message Bk, 4-1/4x3-1/16 Bk, 1 Form/Pg, 40 Messages/Bk, 3/Pk",37.52,4.0,31,5,2014
+1960,2012-08-31,Office Supplies,Binders,GBC Prestige Therm-A-Bind Covers,137.24,5.0,31,8,2012
+1965,2013-08-31,Furniture,Furnishings,"Executive Impressions 10"" Spectator Wall Clock",47.04,4.0,31,8,2013
+1967,2011-10-31,Technology,Phones,Motorola L804,73.584,2.0,31,10,2011
+1968,2011-10-31,Furniture,Chairs,Novimex Fabric Task Chair,146.352,3.0,31,10,2011
+1970,2011-10-31,Office Supplies,Storage,"Letter/Legal File Tote with Clear Snap-On Lid, Black Granite",80.3,5.0,31,10,2011
+1981,2012-10-31,Office Supplies,Storage,Mobile Personal File Cube,46.84,2.0,31,10,2012
+1982,2012-10-31,Office Supplies,Binders,"Acco Four Pocket Poly Ring Binder with Label Holder, Smoke, 1""",29.8,5.0,31,10,2012
+1984,2012-10-31,Office Supplies,Supplies,Acme Tagit Stainless Steel Antibacterial Scissors,29.7,3.0,31,10,2012
+1994,2014-10-31,Office Supplies,Art,4009 Highlighters by Sanford,19.9,5.0,31,10,2014
+1995,2014-10-31,Technology,Phones,Geemarc AmpliPOWER60,148.48,2.0,31,10,2014
+1999,2014-12-31,Office Supplies,Binders,GBC Binding covers,20.72,2.0,31,12,2014
