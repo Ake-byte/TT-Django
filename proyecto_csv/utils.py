@@ -132,8 +132,18 @@ def reglasAsociacion(id, df):
     association["leverage"] = np.round(association["leverage"], decimals = 8)  
     association["conviction"] = np.round(association["conviction"], decimals = 8)
 
+    association = association.rename(columns={'antecedents':'antecedentes', 
+                                                'consequents': 'consecuentes',
+                                                'antecedent support': 'soporte antecedente',
+                                                'consequent support': 'soporte consecuente',
+                                                'support': 'soporte',
+                                                'confidence': 'confianza',
+                                                'lift': 'elevación',
+                                                'leverage': 'apalancamiento',
+                                                'conviction': 'convicción'})
+
     fig, ax=plt.subplots(figsize=(10,4))
-    GA=nx.from_pandas_edgelist(association.head(10),source='antecedents',target='consequents')
+    GA=nx.from_pandas_edgelist(association.head(10),source='antecedentes',target='consecuentes')
     nx.draw(GA,with_labels=True,  node_size=100, arrows=True, pos=nx.circular_layout(GA))
     fig.savefig(os.path.join(settings.BASE_DIR, f'static/images/reglas/asociacion{id}.jpg'))
 
