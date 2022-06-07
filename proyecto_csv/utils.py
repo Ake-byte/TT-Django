@@ -45,6 +45,7 @@ def ModeloRegresion(df):
     X_multiple = ct.fit_transform(X_multiple)
 
     indexProductos = pd.DataFrame(ct.get_feature_names(), columns=['Product Name'])
+    indexProductos['Product Name'] = indexProductos['Product Name'].str.lower()
     # Separo los datos de "train" en entrenamiento y prueba para probar los algoritmos
     X_train, X_test, y_train, y_test = train_test_split(X_multiple, y_multiple, test_size=0.2, random_state = 1)
     # Defino el algoritmo a utilizar
@@ -61,7 +62,7 @@ def ModeloRegresion(df):
 
 def regresion(regresion_entrenado, product_name, quantity, day, month, index_productos):
     try:
-        index = index_productos.loc[index_productos['Product Name'] == 'cat__x0_' + product_name].index[0]
+        index = index_productos.loc[index_productos['Product Name'] == 'cat__x0_' + product_name.lower()].index[0]
     except IndexError:
         return "Producto no econtrado"
     arr = np.zeros(index_productos.shape[0])
