@@ -14,6 +14,6 @@ class PrediccionArbolForm(forms.Form):
 
 class PrediccionRegresionForm(forms.Form):
     product_name = forms.CharField()
-    quantity = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
-    day = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(31)])
-    month = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
+    quantityR = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(100)])
+    dayR = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(31)])
+    monthR = forms.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])

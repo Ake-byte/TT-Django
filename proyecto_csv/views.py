@@ -82,9 +82,9 @@ def detalleRegistro(request, id):
             prediccionArbol = arbolDesicionClasificacion(arbol_entrenado, day, month, quantity)
         if formR.is_valid():
             product_name = formR.cleaned_data["product_name"]
-            quantityR = formR.cleaned_data["quantity"]
-            dayR = formR.cleaned_data["day"]
-            monthR = formR.cleaned_data["month"]
+            quantityR = formR.cleaned_data["quantityR"]
+            dayR = formR.cleaned_data["dayR"]
+            monthR = formR.cleaned_data["monthR"]
             prediccionRegresion = regresion(regresion_entrenado, product_name, quantityR, dayR, monthR, index_productos)
     else:
         form = PrediccionArbolForm()
