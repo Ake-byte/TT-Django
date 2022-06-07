@@ -19,9 +19,11 @@
                     aria-controls="nav-home" aria-selected="true">Datos Generales</a>
                 <a class="nav-item nav-link" id="nav-graficas-tab" data-toggle="tab" href="#nav-graficas" role="tab"
                     aria-controls="nav-graficas" aria-selected="false">Resumen de Ventas</a>
+                {% if permisoUsuario.tipoPermiso == 2 or permisoUsuario.tipoPermiso == 3 %}
                 <a class="nav-item nav-link" id="nav-regresion-tab" data-toggle="tab" href="#nav-regresion" role="tab"
                     aria-controls="nav-regresion" aria-selected="false">Predicción (regresión)</a>
-                {% if permisoUsuario.tipoPermiso == 2 or permisoUsuario.tipoPermiso == 3 %}
+                {% endif %}
+                {% if permisoUsuario.tipoPermiso == 3 %}
                 <a class="nav-item nav-link" id="nav-arbol-tab" data-toggle="tab" href="#nav-arbol" role="tab"
                     aria-controls="nav-arbol" aria-selected="false">Predicción (árbol de decisión)</a>
                 {% endif %}
